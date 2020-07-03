@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/header.component';
+import Hero from './components/hero/hero.component';
+import About from './components/about/about.component';
+import { themeState } from './atoms/themeState';
+import { useRecoilValue } from 'recoil';
 
-function App() {
+import useLocalStorage from './hooks/useLocalStorage';
+
+const json = {
+  "main": {
+    "name": "Todd Christensen"
+  }
+}
+
+
+const App = () => {
+  const [data] = React.useState(json);
+
+  const [persistedTheme, setPersistedTheme] = useLocalStorage("themeState", 'light');
+  const theme = useRecoilValue(themeState);
+
+  React.useEffect(() => {
+    setPersistedTheme(theme);
+  }, [theme]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`theme-${theme}`}>
+      <Header data={data} />
+      <Hero />
+      <About />
     </div>
   );
 }
