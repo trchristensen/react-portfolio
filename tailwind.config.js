@@ -15,6 +15,7 @@ module.exports = {
       primary: "var(--primary)",
       secondary: "var(--secondary)",
       tertiary: "var(--tertiary)",
+      quartary: "var(--quartary)",
 
       transparent: "transparent",
       current: "currentColor",

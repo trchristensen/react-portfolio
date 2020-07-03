@@ -4,12 +4,14 @@
 
 .theme-light {
     --primary: #fff;
-    --secondary: #a0aec0;
-    --tertiary: red;
+    --secondary: #000;
+    --tertiary: #00ff9f;
+    --quartary: #ccc;
 }
 
 .theme-dark {
-    --primary: black;
-    --secondary: #a0aec0;
-    --tertiary: red;
+    --primary: #000;
+    --secondary: #fff;
+    --tertiary: #00ff9f;
+    --quartary:  #ccc;
 }

@@ -1,10 +1,51 @@
 import React from "react";
-import { themeState } from '../../atoms/themeState';
+import { themeState } from "../../atoms/themeState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 
+const SunIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="feather feather-sun"
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+);
+
+const MoonIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="feather feather-moon"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+);
 
 const Header = ({ data }) => {
-//   const { name } = data.main;
+  //   const { name } = data.main;
 
   const [navOpen, setNavOpen] = React.useState(false);
   const theme = useRecoilValue(themeState);
@@ -12,10 +53,10 @@ const Header = ({ data }) => {
 
   const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
-  }
+  };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-primary p-6">
+    <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-6">
       <div className="block lg:hidden">
         <button
           onClick={() => setNavOpen(!navOpen)}
@@ -60,9 +101,9 @@ const Header = ({ data }) => {
         <div>
           <a
             onClick={() => toggleTheme()}
-            className="inline-block text-sm px-4 py-2 leading-none border rounded text-secondary border-secondary hover:border-transparent hover:text-tertiary hover:bg-secondary mt-4 lg:mt-0"
+            className="inline-block text-sm px-4 py-2 leading-none rounded text-white  mt-4 lg:mt-0 cursor-pointer"
           >
-            {theme === 'light' ? 'Dark' : 'Light' }
+            {theme === "light" ? MoonIcon() : SunIcon()}
           </a>
         </div>
       </div>
