@@ -12,6 +12,7 @@
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
     "react-tailwindcss": "^1.0.0",
+    "react-waypoint": "^9.0.3",
     "recoil": "^0.0.10",
     "tailwindcss": "^1.4.6"
   },

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { themeState } from "../../atoms/themeState";
+import { activeSectionState } from "../../atoms/activeSectionState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 
 const SunIcon = () => (
@@ -55,8 +56,11 @@ const Header = ({ data }) => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+  const activeSection = useRecoilValue(activeSectionState);
+
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-6">
+    <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-6 fixed w-full">
+      <span className="text-white">{ activeSection }</span>
       <div className="block lg:hidden">
         <button
           onClick={() => setNavOpen(!navOpen)}

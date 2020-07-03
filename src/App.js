@@ -29,6 +29,7 @@ const App = () => {
       <Header data={data} />
       <Hero />
       <About />
+      <About />
     </div>
   );
 }
