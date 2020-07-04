@@ -85,51 +85,83 @@ const Header = ({ data }) => {
   };
 
   const activeSection = useRecoilValue(activeSectionState);
-  console.log(activeSection)
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-gray-900 px-6 py-1 fixed w-full">
-      <div className="block lg:hidden">
+    <nav className="flex items-center justify-end flex-wrap bg-gray-900 px-6 py-0 fixed w-full">
+      <div className={`${navOpen ? `` : `navbar flex justify-between w-full flex-row`}`}>
+        {navOpen ? null : (
+          <div className="theme-toggle flex items-center justify-center w-6">
+            <a
+              onClick={() => toggleTheme()}
+              className="inline-block text-sm leading-none text-white cursor-pointer"
+            >
+              {theme === "light" ? MoonIcon() : SunIcon()}
+            </a>
+          </div>
+        )}
+        {navOpen ? null : (
+          <div className="visible-links xs:hidden sm:hidden md:hidden lg:flex lg:items-center xl:flex">
+            <div className="text-sm lg:flex-grow">
+              {navLinks.map((link) =>
+                link.id !== "" ? (
+                  <a
+                    href={link.url}
+                    className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
+                      activeSection === link.id ? "text-tertiary" : "text-white"
+                    }`}
+                  >
+                    {link.title}
+                  </a>
+                ) : null
+              )}
+            </div>
+          </div>
+        )}
         <button
           onClick={() => setNavOpen(!navOpen)}
-          className="flex items-center px-3 py-2 border rounded text-teal-200 border-blue-500 bg-primary hover:text-white hover:border-white"
+          className="flex items-center pt-1 pb-2 py-2 text-tertiary"
         >
           <svg
-            className="fill-current h-3 w-3"
+            className="fill-current h-5 w-5"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            {navOpen ? (
+              <path
+                fill-rule="evenodd"
+                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+              />
+            ) : (
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            )}
           </svg>
         </button>
       </div>
+
+      <div className=""></div>
       {/* // mobile dropdown */}
       <div
         className={`${
           !navOpen ? `hidden` : ``
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+        } w-full block flex-grow flex items-center w-auto`}
       >
         <div className="text-sm lg:flex-grow">
-          {navLinks.map((link) => (
-              link.id !== "" ?
-                <a
-              href={link.url}
-              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 ${(activeSection === link.id) ? 'text-tertiary' : 'text-white'}`}
-            >
-              {link.title}
-            </a>
-            : ' '
-            
-          ))}
-        </div>
-        <div>
-          <a
-            onClick={() => toggleTheme()}
-            className="inline-block text-sm px-4 py-2 leading-none rounded text-white  mt-4 lg:mt-0 cursor-pointer"
-          >
-            {theme === "light" ? MoonIcon() : SunIcon()}
-          </a>
+          {navLinks.map((link) =>
+            link.id !== "" ? (
+              <a
+                href={link.url}
+                className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
+                  activeSection === link.id ? "text-tertiary" : "text-white"
+                }`}
+              >
+                {link.title}
+              </a>
+            ) : null
+          )}
         </div>
       </div>
       {/* end mobile dropdown */}

@@ -10,18 +10,20 @@ const Hero = () => {
     const setActiveSection = useSetRecoilState(activeSectionState);
     return (
       <>
-        <Waypoint
-          onEnter={() => setActiveSection("top")}
-        />
+        <Waypoint onEnter={() => setActiveSection("top")} />
         <section
           id="hero"
-          className="h-screen bg-primary flex items-center justify-center"
-        >
-          <div class="container">
+          className="h-screen bg-primary flex items-center justify-center flex-wrap flex-col">
+          <div class="container w-full">
             <div className="card">
               <h2 className="text-secondary text-center text-6xl">Hero</h2>
             </div>
           </div>
+          <p className="scrolldown w-full">
+            <a className="smoothscroll" href="#about">
+              <i className="icon-down-circle"></i>
+            </a>
+          </p>
         </section>
       </>
     );
