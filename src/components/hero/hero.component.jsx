@@ -12,7 +12,7 @@ const Hero = () => {
       <>
         <Waypoint onEnter={() => setActiveSection("top")} />
         <section
-          id="hero"
+          id="top"
           className="h-screen bg-primary flex items-center justify-center flex-wrap flex-col">
           <div class="container w-full">
             <div className="card">

@@ -9,7 +9,7 @@ import { themeState } from './atoms/themeState';
 import { useRecoilValue } from 'recoil';
 
 import useLocalStorage from './hooks/useLocalStorage';
-import { Waypoint } from 'react-waypoint';
+
 
 const json = {
   "main": {

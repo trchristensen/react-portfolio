@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { themeState } from "../../atoms/themeState";
 import { activeSectionState } from "../../atoms/activeSectionState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
@@ -48,7 +48,7 @@ const MoonIcon = () => (
 const Header = ({ data }) => {
   //   const { name } = data.main;
 
-  const navLinks = [
+  const wayPoints = [
     {
       title: "Top",
       id: "top",
@@ -85,27 +85,34 @@ const Header = ({ data }) => {
   };
 
   const activeSection = useRecoilValue(activeSectionState);
+  const setActiveSection = useSetRecoilState(activeSectionState);
 
   return (
     <nav className="flex items-center justify-end flex-wrap bg-gray-900 px-6 py-0 fixed w-full">
-      <div className={`${navOpen ? `` : `navbar flex justify-between w-full flex-row`}`}>
+      <div
+        className={`navbar flex w-full justify-between ${
+          navOpen ? `` : `flex justify-between w-full flex-row`
+        }`}
+      >
+        {/* {navOpen ? null : ( */}
+        <div className="theme-toggle flex items-center justify-center w-6">
+          <a
+            onClick={() => toggleTheme()}
+            className="inline-block text-sm leading-none text-white cursor-pointer"
+          >
+            {theme === "light" ? MoonIcon() : SunIcon()}
+          </a>
+        </div>
+        {/* )} */}
         {navOpen ? null : (
-          <div className="theme-toggle flex items-center justify-center w-6">
-            <a
-              onClick={() => toggleTheme()}
-              className="inline-block text-sm leading-none text-white cursor-pointer"
-            >
-              {theme === "light" ? MoonIcon() : SunIcon()}
-            </a>
-          </div>
-        )}
-        {navOpen ? null : (
-          <div className="visible-links xs:hidden sm:hidden md:hidden lg:flex lg:items-center xl:flex">
+          <div className="visible-links hidden lg:flex lg:items-center xl:flex">
             <div className="text-sm lg:flex-grow">
-              {navLinks.map((link) =>
+              {wayPoints.map((link) =>
                 link.id !== "" ? (
                   <a
+                    key={link.id}
                     href={link.url}
+                    onClick={() => setActiveSection(link.id)}
                     className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
                       activeSection === link.id ? "text-tertiary" : "text-white"
                     }`}
@@ -142,29 +149,43 @@ const Header = ({ data }) => {
         </button>
       </div>
 
-      <div className=""></div>
       {/* // mobile dropdown */}
       <div
-        className={`${
+        className={`menu-dropdown ${
           !navOpen ? `hidden` : ``
-        } w-full block flex-grow flex items-center w-auto`}
+        } w-full block flex-grow flex-col flex w-auto`}
       >
-        <div className="text-sm lg:flex-grow">
-          {navLinks.map((link) =>
-            link.id !== "" ? (
-              <a
-                href={link.url}
-                className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
-                  activeSection === link.id ? "text-tertiary" : "text-white"
-                }`}
-              >
-                {link.title}
-              </a>
-            ) : null
-          )}
+        <div className="menu-dropdown-container">
+          <div className="text-sm lg:flex-grow">
+            {wayPoints.map((link) =>
+              link.id !== "" ? (
+                <a
+                  key={link.id}
+                  onClick={() => setActiveSection(link.id)}
+                  href={link.url}
+                  className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
+                    activeSection === link.id ? "text-tertiary" : "text-white"
+                  }`}
+                >
+                  {link.title}
+                </a>
+              ) : null
+            )}
+          </div>
+          <div className="text-sm lg:flex-grow border-top">
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
+              Link 1
+            </a>
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
+              Link 2
+            </a>
+            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
+              Link 3
+            </a>
+          </div>
         </div>
+        {/* end mobile dropdown */}
       </div>
-      {/* end mobile dropdown */}
     </nav>
   );
 };
