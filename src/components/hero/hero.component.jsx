@@ -8,12 +8,11 @@ import { useSetRecoilState } from "recoil";
 const Hero = () => {
 
     const setActiveSection = useSetRecoilState(activeSectionState);
-
     return (
-      <Waypoint
-      onLeave={() => console.log("left hero!")}
-      onEnter={() => setActiveSection('hero')}
-      >
+      <>
+        <Waypoint
+          onEnter={() => setActiveSection("top")}
+        />
         <section
           id="hero"
           className="h-screen bg-primary flex items-center justify-center"
@@ -24,7 +23,7 @@ const Hero = () => {
             </div>
           </div>
         </section>
-      </Waypoint>
+      </>
     );
 }
 

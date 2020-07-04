@@ -48,6 +48,34 @@ const MoonIcon = () => (
 const Header = ({ data }) => {
   //   const { name } = data.main;
 
+  const navLinks = [
+    {
+      title: "Top",
+      id: "top",
+      url: "#top",
+    },
+    {
+      title: "About",
+      id: "about",
+      url: "#about",
+    },
+    {
+      title: "Resume",
+      id: "resume",
+      url: "#resume",
+    },
+    {
+      title: "Work",
+      id: "work",
+      url: "#work",
+    },
+    {
+      title: "Contact",
+      id: "contact",
+      url: "#contact",
+    },
+  ];
+
   const [navOpen, setNavOpen] = React.useState(false);
   const theme = useRecoilValue(themeState);
   const setTheme = useSetRecoilState(themeState);
@@ -57,10 +85,10 @@ const Header = ({ data }) => {
   };
 
   const activeSection = useRecoilValue(activeSectionState);
+  console.log(activeSection)
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-gray-900 p-6 fixed w-full">
-      <span className="text-white">{ activeSection }</span>
+    <nav className="flex items-center justify-between flex-wrap bg-gray-900 px-6 py-1 fixed w-full">
       <div className="block lg:hidden">
         <button
           onClick={() => setNavOpen(!navOpen)}
@@ -83,24 +111,17 @@ const Header = ({ data }) => {
         } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
       >
         <div className="text-sm lg:flex-grow">
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Docs
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            Examples
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-          >
-            Blog
-          </a>
+          {navLinks.map((link) => (
+              link.id !== "" ?
+                <a
+              href={link.url}
+              className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 ${(activeSection === link.id) ? 'text-tertiary' : 'text-white'}`}
+            >
+              {link.title}
+            </a>
+            : ' '
+            
+          ))}
         </div>
         <div>
           <a

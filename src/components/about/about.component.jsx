@@ -7,17 +7,14 @@ const About = () => {
     const setActiveSection = useSetRecoilState(activeSectionState);
 
     return (
-          <Waypoint
-      onLeave={() => console.log("left about!")}
-      onEnter={() => setActiveSection('about')}
-      >
-      <section
-        id="about"
-        className="h-screen bg-white flex items-center justify-center"
-      >
-        <h2>About</h2>
-      </section>
-      </Waypoint>
+      <>
+        <section id="about">
+          <div className="h-screen bg-gray-500 flex justify-center items-center">
+            <Waypoint onEnter={() => setActiveSection("about")} />
+            <h2>About</h2>
+          </div>
+        </section>
+      </>
     );
 }
 
