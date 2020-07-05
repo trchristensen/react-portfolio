@@ -16,6 +16,7 @@ module.exports = {
       secondary: "var(--secondary)",
       tertiary: "var(--tertiary)",
       quartary: "var(--quartary)",
+      lightgray: "var(--light-gray)",
 
       transparent: "transparent",
       current: "currentColor",

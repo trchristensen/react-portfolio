@@ -1,32 +1,39 @@
-import React from 'react';
+import React, { Suspense } from "react";
 import { Waypoint } from "react-waypoint";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+
+import "./hero.styles.scss";
+
 import { activeSectionState } from "../../atoms/activeSectionState";
-import { useSetRecoilState } from "recoil";
 
 
+const Hero = (props) => {
+  const setActiveSection = useSetRecoilState(activeSectionState);
 
-const Hero = () => {
-
-    const setActiveSection = useSetRecoilState(activeSectionState);
-    return (
-      <>
-        <Waypoint onEnter={() => setActiveSection("top")} />
-        <section
-          id="top"
-          className="h-screen bg-primary flex items-center justify-center flex-wrap flex-col">
-          <div class="container w-full">
-            <div className="card">
-              <h2 className="text-secondary text-center text-6xl">Hero</h2>
-            </div>
-          </div>
-          <p className="scrolldown w-full">
-            <a className="smoothscroll" href="#about">
-              <i className="icon-down-circle"></i>
-            </a>
-          </p>
-        </section>
-      </>
-    );
-}
+  return (
+    <>
+      <Waypoint onEnter={() => setActiveSection("top")} />
+      <section
+        id="top"
+        className="h-screen bg-primary flex items-center justify-center flex-wrap flex-col hero"
+      >
+        <div className="container flex flex-wrap flex-col text-center px-10">
+          <h2 className="text-secondary mb-0 lg:mb-6 text-3xl lg:text-6xl">
+            Todd
+            Christensen
+          </h2>
+          <h3 className="text-quartary text-lg lg:text-3xl">
+            React Developer
+          </h3>
+          <span className="primary-font mt-3 inline-block description">
+            I'm a remote based developer from
+            California, residing in The Philippines 🇵🇭. I am currently looking
+            for a position!
+          </span>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Hero;

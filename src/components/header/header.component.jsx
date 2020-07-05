@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { themeState } from "../../atoms/themeState";
 import { activeSectionState } from "../../atoms/activeSectionState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
+import './header.styles.scss';
+
 
 const SunIcon = () => (
   <svg
@@ -87,10 +89,11 @@ const Header = ({ data }) => {
   const activeSection = useRecoilValue(activeSectionState);
   const setActiveSection = useSetRecoilState(activeSectionState);
 
+
   return (
-    <nav className="flex items-center justify-end flex-wrap bg-gray-900 px-6 py-0 fixed w-full">
+    <nav className="flex items-center justify-end flex-wrap fixed w-full lg:bg-primary">
       <div
-        className={`navbar flex w-full justify-between ${
+        className={`navbar flex w-full justify-between px-1 pr-4 py-0 lg:py-2 ${
           navOpen ? `` : `flex justify-between w-full flex-row`
         }`}
       >
@@ -98,7 +101,7 @@ const Header = ({ data }) => {
         <div className="theme-toggle flex items-center justify-center w-6">
           <a
             onClick={() => toggleTheme()}
-            className="inline-block text-sm leading-none text-white cursor-pointer"
+            className="inline-block text-sm leading-none text-secondary cursor-pointer"
           >
             {theme === "light" ? MoonIcon() : SunIcon()}
           </a>
@@ -114,7 +117,7 @@ const Header = ({ data }) => {
                     href={link.url}
                     onClick={() => setActiveSection(link.id)}
                     className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
-                      activeSection === link.id ? "text-tertiary" : "text-white"
+                      activeSection === link.id ? "text-quartary" : "text-secondary"
                     }`}
                   >
                     {link.title}
@@ -126,7 +129,7 @@ const Header = ({ data }) => {
         )}
         <button
           onClick={() => setNavOpen(!navOpen)}
-          className="flex items-center pt-1 pb-2 py-2 text-tertiary"
+          className="flex items-center pt-1 pb-2 py-2 text-quartary"
         >
           <svg
             className="fill-current h-5 w-5"
@@ -151,11 +154,11 @@ const Header = ({ data }) => {
 
       {/* // mobile dropdown */}
       <div
-        className={`menu-dropdown ${
+        className={`menu-dropdown id="menu-dropdown" ${
           !navOpen ? `hidden` : ``
-        } w-full block flex-grow flex-col flex w-auto`}
+        } w-full block flex-grow flex-col flex w-auto h-screen`}
       >
-        <div className="menu-dropdown-container">
+        <div className="menu-dropdown-container bg-gray-700">
           <div className="text-sm lg:flex-grow">
             {wayPoints.map((link) =>
               link.id !== "" ? (
@@ -164,7 +167,7 @@ const Header = ({ data }) => {
                   onClick={() => setActiveSection(link.id)}
                   href={link.url}
                   className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
-                    activeSection === link.id ? "text-tertiary" : "text-white"
+                    activeSection === link.id ? "text-quartary" : "text-white"
                   }`}
                 >
                   {link.title}
@@ -185,6 +188,11 @@ const Header = ({ data }) => {
           </div>
         </div>
         {/* end mobile dropdown */}
+        <div
+          onClick={() => (navOpen ? setNavOpen(false) : null)}
+          className="w-full flex-grow"
+          id="dropdown-exit"
+        ></div>
       </div>
     </nav>
   );

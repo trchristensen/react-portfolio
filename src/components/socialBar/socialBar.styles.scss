@@ -1,0 +1,45 @@
+.sidebar__social {
+  position: fixed;
+  left: 0;
+  width: auto;
+  height: 100vh;
+  display: flex;
+
+  .social {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+             padding-top: 15px;
+padding-bottom: 15px;
+  }
+
+  .social li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 0;
+    border: 1px solid transparent;
+    a {
+      padding: 8px;
+      width: 32px;
+      height: 32px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-delay: 1s;
+      -o-transition-delay: 1s;
+      transition-delay: 1s;
+      color: var(--quartary);
+  
+    }
+  }
+}
