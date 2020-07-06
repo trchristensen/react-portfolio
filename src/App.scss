@@ -50,11 +50,11 @@ p,
 
   .neu-convex {
     border-radius: 50px;
-    background: linear-gradient(145deg, #ccc, white);
-    box-shadow: 16px 16px 31px #ccc, -16px -16px 31px #ccc;
+    background: linear-gradient(145deg, #eee, white);
+    box-shadow: 16px 16px 31px #eee, -16px -16px 31px #eee;
     &:hover {
-      background: linear-gradient(145deg, white, #ccc);
-      box-shadow: 16px 16px 31px #ccc, -16px -16px 31px #ccc;
+      background: linear-gradient(145deg, white, #eee);
+      box-shadow: 16px 16px 31px #eee, -16px -16px 31px #eee;
     }
     
   }
@@ -324,8 +324,8 @@ ul#nav li.current a {
   font-size: 16px;
   line-height: 24px;
   color: #6e7881;
-  margin-bottom: 18px;
-  margin-top: 9px;
+  // margin-bottom: 18px;
+  // margin-top: 9px;
 }
 #resume .info span {
   margin-right: 5px;

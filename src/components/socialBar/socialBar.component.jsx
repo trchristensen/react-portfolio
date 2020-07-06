@@ -19,27 +19,27 @@ const SocialBar = () => {
     },
     {
       name: "google-plus",
-      url: "http://googleplus.com/tbakerx",
+      url: "http://googleplus.com/trchristensen",
       icon: faGoogle,
     },
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/tim-baker-8420009a/",
+      url: "#",
       icon: faLinkedin
     },
     {
       name: "instagram",
-      url: "http://instagram.com/tbaker_x",
+      url: "#",
       icon: faInstagram
     },
     {
       name: "github",
-      url: "http://github.com/tbakerx",
+      url: "http://github.com/trchristensen",
       icon: faGithub
     },
     {
       name: "skype",
-      url: "http://skype.com",
+      url: "#",
       icon: faSkype
     },
   ];

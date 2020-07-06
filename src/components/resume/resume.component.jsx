@@ -24,8 +24,10 @@ const Resume = () => {
               <div class="row item">
                 <div class="twelve columns">
                   <div>
-                    <h3 className="text-secondary">San Diego State University</h3>
-                    <p class="info primary-font">
+                    <h3 className="text-secondary">
+                      San Diego State University
+                    </h3>
+                    <p class="info primary-font mt-2 mb-4">
                       BA Public Administration <span>•</span>
                       <em class="date">2007-2011</em>
                     </p>
@@ -44,9 +46,17 @@ const Resume = () => {
             <div className="w-full lg:w-3/4 columns main-col">
               <div>
                 <h3 className="text-secondary">DesignStudio</h3>
-                <p className="info primary-font">
-                  Developer<span>•</span>{" "}
-                  <em className="date">April 2015 - April 2019</em>
+                <p className="info primary-font mt-2 mb-0">
+                  Developer <span>•</span> Full-Time<span>•</span>{" "}
+                  <em className="date">April 2015 - October 2017</em>
+                </p>
+                <p className="info primary-font mt-0 mb-0">
+                  Developer <span>•</span> Full-Time, Remote<span>•</span>{" "}
+                  <em className="date">October 2017 - April 2018</em>
+                </p>
+                <p className="info primary-font mt-0 mb-4">
+                  Developer <span>•</span> Part-Time, Remote<span>•</span>{" "}
+                  <em className="date">April 2018 - April 2019</em>
                 </p>
                 <p>
                   Started as production, doing simple tasks until I proved
