@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import { useRecoilValue } from "recoil";
 import useLocalStorage from "./hooks/useLocalStorage";
+import ReactGA from "react-ga";
 
 import Header from "./components/header/header.component";
 import Hero from "./components/hero/hero.component";
@@ -14,11 +15,10 @@ import SocialBar from "./components/socialBar/socialBar.component";
 import { themeState } from "./atoms/themeState";
 
 const App = () => {
-  const [, setPersistedTheme] = useLocalStorage(
-    "themeState",
-    "light"
-  );
-  
+  ReactGA.initialize('UA-IDNUMBER');
+  ReactGA.pageview(window.location.pathname);
+
+  const [, setPersistedTheme] = useLocalStorage("themeState", "light");
 
   const theme = useRecoilValue(themeState);
   React.useEffect(() => {

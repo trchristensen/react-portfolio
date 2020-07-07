@@ -25,22 +25,6 @@ p,
   letter-spacing: 0.03rem;
 }
 
-.neu-concave {
-  border-radius: 50px;
-  background: linear-gradient(145deg, #21262d, #282d36);
-  box-shadow: 16px 16px 31px #1b1f25, -16px -16px 31px #2f3540;
-}
-
-.neu-convex {
-  border-radius: 50px;
-  background: linear-gradient(145deg, #282d36, #21262d);
-  box-shadow: 16px 16px 31px #1b1f25, -16px -16px 31px #2f3540;
-  &:hover {
-    background: linear-gradient(145deg, #21262d, #282d36);
-    box-shadow: 16px 16px 31px #1b1f25, -16px -16px 31px #2f3540;
-  }
-}
-
 .theme-light {
   form,
   .card {
@@ -90,7 +74,6 @@ p,
     button {
       background: linear-gradient(145deg, #282d36, #21262d);
       box-shadow: 11px 11px 27px #21252c, -11px -11px 27px #292f38;
-      border: 1px solid #3e9f803d;
     }
 
     textarea {
