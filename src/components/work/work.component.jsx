@@ -6,7 +6,7 @@ import Card from '../card/card.component';
 
 const Work = () => {
   const setActiveSection = useSetRecoilState(activeSectionState);
-  let num = [1, 2, 3, 4, 5, 6];
+  let num = [1, 2];
   return (
     <>
       <section
@@ -15,10 +15,10 @@ const Work = () => {
       >
         <Waypoint onEnter={() => setActiveSection("work")} />
         <div className="container flex flex-col px-10 lg:px-16 flex-wrap items-center justify-center ">
-          <div className="w-full grid grid-flow-row grid-cols-3 grid-rows gap-4">
-            {num.map((tile) => {
+          <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows gap-4">
+            {num.map((tile, index) => {
               return (
-                  <Card />
+                  <Card key={index} />
               );
             })}
           </div>

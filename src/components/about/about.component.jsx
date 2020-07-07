@@ -3,7 +3,7 @@ import { useSetRecoilState } from "recoil";
 import { Waypoint } from "react-waypoint";
 import { activeSectionState } from "../../atoms/activeSectionState";
 
-import { fontAwesomeIcon, FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 import './about.styles.scss';
@@ -42,10 +42,10 @@ const About = () => {
                     <p>Address</p>
                   </div>
                   <div className="w-full w-1/2">
-                    <a href="#" className="button btn neu-convex">
+                    <button href="#" className="button btn neu-convex">
                       <FontAwesomeIcon icon={faDownload} />
                       <span className="pl-2">Download Resume</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

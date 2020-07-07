@@ -1,64 +1,6 @@
-// #about {
-//   h2 {
-//     font-size: 2.25rem;
-//     line-height: normal;
-//     font-weight: 400;
-//     position: relative;
-//     text-transform: uppercase;
-//     letter-spacing: 0.3em;
-//     position: relative;
-//     margin-bottom: 12px;
-//   }
-
-// }
-
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
-
-#about {
-  /* background: #2B2B2B; */
-  padding-top: 96px;
-  padding-bottom: 66px;
-  // overflow: hidden;
-}
-
-/* #about a, #about a:visited  { color: #fff; } */
-/* #about a:hover, #about a:focus { color: #11ABB0; } */
-
-h2 {
-  color: #fff;
-  font-size: 36px;
-  letter-spacing: 0.05em;
-  line-height: 45px;
-  margin-bottom: 28px;
-  text-transform: uppercase;
-}
-p, a {
-  line-height: 30px;
-//   color: #7a7a7a;
-color: #98a0a4;
-}
-
-
-#about .contact-details {
-  width: 41.66667%;
-}
-#about .download {
-  width: 58.33333%;
-  padding-top: 6px;
-}
-#about .main-col {
-  padding-right: 5%;
-}
-#about .download .button {
-  margin-top: 6px;
-}
-
-#about .download .button i {
-  margin-right: 15px;
-  font-size: 20px;
-}
 
 .theme-light {
   .profile-pic {

@@ -1,51 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { themeState } from "../../atoms/themeState";
 import { activeSectionState } from "../../atoms/activeSectionState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import './header.styles.scss';
 
-
-const SunIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-sun"
-  >
-    <circle cx="12" cy="12" r="5"></circle>
-    <line x1="12" y1="1" x2="12" y2="3"></line>
-    <line x1="12" y1="21" x2="12" y2="23"></line>
-    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-    <line x1="1" y1="12" x2="3" y2="12"></line>
-    <line x1="21" y1="12" x2="23" y2="12"></line>
-    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-  </svg>
-);
-
-const MoonIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-moon"
-  >
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-  </svg>
-);
+import { ReactComponent as SunIcon } from "../../assets/icons/SunIcon.svg";
+import { ReactComponent as MoonIcon } from "../../assets/icons/MoonIcon.svg";
+import { ReactComponent as HamburgerOpen } from "../../assets/icons/HamburgerOpen.svg";
+import { ReactComponent as HamburgerClosed } from "../../assets/icons/HamburgerClosed.svg";
 
 const Header = ({ data }) => {
   //   const { name } = data.main;
@@ -99,12 +61,12 @@ const Header = ({ data }) => {
       >
         {/* {navOpen ? null : ( */}
         <div className="theme-toggle flex items-center justify-center w-6">
-          <a
+          <button
             onClick={() => toggleTheme()}
             className="inline-block text-sm leading-none text-secondary cursor-pointer"
           >
-            {theme === "light" ? MoonIcon() : SunIcon()}
-          </a>
+            {theme === "light" ? <MoonIcon /> : <SunIcon />}
+          </button>
         </div>
         {/* )} */}
         {navOpen ? null : (
@@ -117,7 +79,9 @@ const Header = ({ data }) => {
                     href={link.url}
                     onClick={() => setActiveSection(link.id)}
                     className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
-                      activeSection === link.id ? "text-quartary" : "text-secondary"
+                      activeSection === link.id
+                        ? "text-quartary"
+                        : "text-secondary"
                     }`}
                   >
                     {link.title}
@@ -131,24 +95,11 @@ const Header = ({ data }) => {
           onClick={() => setNavOpen(!navOpen)}
           className="flex items-center pt-1 pb-2 py-2 text-quartary"
         >
-          <svg
-            className="fill-current h-5 w-5"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            {navOpen ? (
-              <path
-                fill-rule="evenodd"
-                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-              />
-            ) : (
-              <path
-                fill-rule="evenodd"
-                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-              />
-            )}
-          </svg>
+          {navOpen ? (
+            <HamburgerOpen />
+          ) : (
+            <HamburgerClosed />
+          )}
         </button>
       </div>
 
@@ -176,15 +127,15 @@ const Header = ({ data }) => {
             )}
           </div>
           <div className="text-sm lg:flex-grow border-top">
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
+            <button className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
               Link 1
-            </a>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
+            </button>
+            <button className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
               Link 2
-            </a>
-            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
+            </button>
+            <button className="block mt-4 lg:inline-block lg:mt-0 text-white mr-2 ml-2 mb-1">
               Link 3
-            </a>
+            </button>
           </div>
         </div>
         {/* end mobile dropdown */}

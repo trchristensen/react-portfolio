@@ -13,6 +13,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.0.1",
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
     "react-tailwindcss": "^1.0.0",

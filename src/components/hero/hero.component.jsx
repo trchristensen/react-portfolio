@@ -1,7 +1,6 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Waypoint } from "react-waypoint";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-
+import { useSetRecoilState } from "recoil";
 import "./hero.styles.scss";
 
 import { activeSectionState } from "../../atoms/activeSectionState";
@@ -23,11 +22,11 @@ const Hero = (props) => {
             Christensen
           </h2>
           <h3 className="text-quartary text-lg lg:text-3xl">
-            React Developer
+            React/ Javascript Developer
           </h3>
           <span className="primary-font mt-3 inline-block description">
             I'm a remote based developer from
-            California, residing in The Philippines 🇵🇭. I am currently looking
+            California, residing in The Philippines <span role="img" aria-label="Philippines Flag">🇵🇭</span>. I am currently looking
             for a position!
           </span>
         </div>
