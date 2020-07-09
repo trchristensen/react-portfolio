@@ -414,7 +414,7 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -1142,6 +1142,10 @@ video {
   border-color: var(--quartary);
 }
 
+.divide-dark > :not(template) ~ :not(template) {
+  border-color: var(--dark);
+}
+
 .divide-lightgray > :not(template) ~ :not(template) {
   border-color: var(--light-gray);
 }
@@ -1806,6 +1810,10 @@ video {
   background-color: var(--quartary);
 }
 
+.bg-dark {
+  background-color: var(--dark);
+}
+
 .bg-lightgray {
   background-color: var(--light-gray);
 }
@@ -2386,6 +2394,10 @@ video {
   background-color: var(--quartary);
 }
 
+.hover\:bg-dark:hover {
+  background-color: var(--dark);
+}
+
 .hover\:bg-lightgray:hover {
   background-color: var(--light-gray);
 }
@@ -2964,6 +2976,10 @@ video {
 
 .focus\:bg-quartary:focus {
   background-color: var(--quartary);
+}
+
+.focus\:bg-dark:focus {
+  background-color: var(--dark);
 }
 
 .focus\:bg-lightgray:focus {
@@ -3686,6 +3702,10 @@ video {
   border-color: var(--quartary);
 }
 
+.border-dark {
+  border-color: var(--dark);
+}
+
 .border-lightgray {
   border-color: var(--light-gray);
 }
@@ -4266,6 +4286,10 @@ video {
   border-color: var(--quartary);
 }
 
+.hover\:border-dark:hover {
+  border-color: var(--dark);
+}
+
 .hover\:border-lightgray:hover {
   border-color: var(--light-gray);
 }
@@ -4844,6 +4868,10 @@ video {
 
 .focus\:border-quartary:focus {
   border-color: var(--quartary);
+}
+
+.focus\:border-dark:focus {
+  border-color: var(--dark);
 }
 
 .focus\:border-lightgray:focus {
@@ -6177,7 +6205,7 @@ video {
 }
 
 .font-sans {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
@@ -8498,6 +8526,10 @@ video {
   color: var(--quartary);
 }
 
+.placeholder-dark::placeholder {
+  color: var(--dark);
+}
+
 .placeholder-lightgray::placeholder {
   color: var(--light-gray);
 }
@@ -9076,6 +9108,10 @@ video {
 
 .focus\:placeholder-quartary:focus::placeholder {
   color: var(--quartary);
+}
+
+.focus\:placeholder-dark:focus::placeholder {
+  color: var(--dark);
 }
 
 .focus\:placeholder-lightgray:focus::placeholder {
@@ -9972,6 +10008,10 @@ video {
   color: var(--quartary);
 }
 
+.text-dark {
+  color: var(--dark);
+}
+
 .text-lightgray {
   color: var(--light-gray);
 }
@@ -10552,6 +10592,10 @@ video {
   color: var(--quartary);
 }
 
+.hover\:text-dark:hover {
+  color: var(--dark);
+}
+
 .hover\:text-lightgray:hover {
   color: var(--light-gray);
 }
@@ -11130,6 +11174,10 @@ video {
 
 .focus\:text-quartary:focus {
   color: var(--quartary);
+}
+
+.focus\:text-dark:focus {
+  color: var(--dark);
 }
 
 .focus\:text-lightgray:focus {
@@ -14584,7 +14632,7 @@ video {
 }
 
 .theme-light {
-  --primary: #e7e8eb;
+  --primary: #FAFAFB;
   --secondary: #2f3337;
   --tertiary: #b8dcf5;
   --quartary: #0095ff;
@@ -14595,6 +14643,7 @@ video {
   --secondary: #e7e8eb;
   --tertiary: #0095ff;
   --quartary: #b8dcf5;
+  --dark: #1C1F23;
 }
 
 :root {
@@ -15136,6 +15185,10 @@ video {
 
   .sm\:divide-quartary > :not(template) ~ :not(template) {
     border-color: var(--quartary);
+  }
+
+  .sm\:divide-dark > :not(template) ~ :not(template) {
+    border-color: var(--dark);
   }
 
   .sm\:divide-lightgray > :not(template) ~ :not(template) {
@@ -15802,6 +15855,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .sm\:bg-dark {
+    background-color: var(--dark);
+  }
+
   .sm\:bg-lightgray {
     background-color: var(--light-gray);
   }
@@ -16382,6 +16439,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .sm\:hover\:bg-dark:hover {
+    background-color: var(--dark);
+  }
+
   .sm\:hover\:bg-lightgray:hover {
     background-color: var(--light-gray);
   }
@@ -16960,6 +17021,10 @@ video {
 
   .sm\:focus\:bg-quartary:focus {
     background-color: var(--quartary);
+  }
+
+  .sm\:focus\:bg-dark:focus {
+    background-color: var(--dark);
   }
 
   .sm\:focus\:bg-lightgray:focus {
@@ -17682,6 +17747,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .sm\:border-dark {
+    border-color: var(--dark);
+  }
+
   .sm\:border-lightgray {
     border-color: var(--light-gray);
   }
@@ -18262,6 +18331,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .sm\:hover\:border-dark:hover {
+    border-color: var(--dark);
+  }
+
   .sm\:hover\:border-lightgray:hover {
     border-color: var(--light-gray);
   }
@@ -18840,6 +18913,10 @@ video {
 
   .sm\:focus\:border-quartary:focus {
     border-color: var(--quartary);
+  }
+
+  .sm\:focus\:border-dark:focus {
+    border-color: var(--dark);
   }
 
   .sm\:focus\:border-lightgray:focus {
@@ -20173,7 +20250,7 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .sm\:font-serif {
@@ -22494,6 +22571,10 @@ video {
     color: var(--quartary);
   }
 
+  .sm\:placeholder-dark::placeholder {
+    color: var(--dark);
+  }
+
   .sm\:placeholder-lightgray::placeholder {
     color: var(--light-gray);
   }
@@ -23072,6 +23153,10 @@ video {
 
   .sm\:focus\:placeholder-quartary:focus::placeholder {
     color: var(--quartary);
+  }
+
+  .sm\:focus\:placeholder-dark:focus::placeholder {
+    color: var(--dark);
   }
 
   .sm\:focus\:placeholder-lightgray:focus::placeholder {
@@ -23968,6 +24053,10 @@ video {
     color: var(--quartary);
   }
 
+  .sm\:text-dark {
+    color: var(--dark);
+  }
+
   .sm\:text-lightgray {
     color: var(--light-gray);
   }
@@ -24548,6 +24637,10 @@ video {
     color: var(--quartary);
   }
 
+  .sm\:hover\:text-dark:hover {
+    color: var(--dark);
+  }
+
   .sm\:hover\:text-lightgray:hover {
     color: var(--light-gray);
   }
@@ -25126,6 +25219,10 @@ video {
 
   .sm\:focus\:text-quartary:focus {
     color: var(--quartary);
+  }
+
+  .sm\:focus\:text-dark:focus {
+    color: var(--dark);
   }
 
   .sm\:focus\:text-lightgray:focus {
@@ -29117,6 +29214,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .md\:divide-dark > :not(template) ~ :not(template) {
+    border-color: var(--dark);
+  }
+
   .md\:divide-lightgray > :not(template) ~ :not(template) {
     border-color: var(--light-gray);
   }
@@ -29781,6 +29882,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .md\:bg-dark {
+    background-color: var(--dark);
+  }
+
   .md\:bg-lightgray {
     background-color: var(--light-gray);
   }
@@ -30361,6 +30466,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .md\:hover\:bg-dark:hover {
+    background-color: var(--dark);
+  }
+
   .md\:hover\:bg-lightgray:hover {
     background-color: var(--light-gray);
   }
@@ -30939,6 +31048,10 @@ video {
 
   .md\:focus\:bg-quartary:focus {
     background-color: var(--quartary);
+  }
+
+  .md\:focus\:bg-dark:focus {
+    background-color: var(--dark);
   }
 
   .md\:focus\:bg-lightgray:focus {
@@ -31661,6 +31774,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .md\:border-dark {
+    border-color: var(--dark);
+  }
+
   .md\:border-lightgray {
     border-color: var(--light-gray);
   }
@@ -32241,6 +32358,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .md\:hover\:border-dark:hover {
+    border-color: var(--dark);
+  }
+
   .md\:hover\:border-lightgray:hover {
     border-color: var(--light-gray);
   }
@@ -32819,6 +32940,10 @@ video {
 
   .md\:focus\:border-quartary:focus {
     border-color: var(--quartary);
+  }
+
+  .md\:focus\:border-dark:focus {
+    border-color: var(--dark);
   }
 
   .md\:focus\:border-lightgray:focus {
@@ -34152,7 +34277,7 @@ video {
   }
 
   .md\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .md\:font-serif {
@@ -36473,6 +36598,10 @@ video {
     color: var(--quartary);
   }
 
+  .md\:placeholder-dark::placeholder {
+    color: var(--dark);
+  }
+
   .md\:placeholder-lightgray::placeholder {
     color: var(--light-gray);
   }
@@ -37051,6 +37180,10 @@ video {
 
   .md\:focus\:placeholder-quartary:focus::placeholder {
     color: var(--quartary);
+  }
+
+  .md\:focus\:placeholder-dark:focus::placeholder {
+    color: var(--dark);
   }
 
   .md\:focus\:placeholder-lightgray:focus::placeholder {
@@ -37947,6 +38080,10 @@ video {
     color: var(--quartary);
   }
 
+  .md\:text-dark {
+    color: var(--dark);
+  }
+
   .md\:text-lightgray {
     color: var(--light-gray);
   }
@@ -38527,6 +38664,10 @@ video {
     color: var(--quartary);
   }
 
+  .md\:hover\:text-dark:hover {
+    color: var(--dark);
+  }
+
   .md\:hover\:text-lightgray:hover {
     color: var(--light-gray);
   }
@@ -39105,6 +39246,10 @@ video {
 
   .md\:focus\:text-quartary:focus {
     color: var(--quartary);
+  }
+
+  .md\:focus\:text-dark:focus {
+    color: var(--dark);
   }
 
   .md\:focus\:text-lightgray:focus {
@@ -43096,6 +43241,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .lg\:divide-dark > :not(template) ~ :not(template) {
+    border-color: var(--dark);
+  }
+
   .lg\:divide-lightgray > :not(template) ~ :not(template) {
     border-color: var(--light-gray);
   }
@@ -43760,6 +43909,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .lg\:bg-dark {
+    background-color: var(--dark);
+  }
+
   .lg\:bg-lightgray {
     background-color: var(--light-gray);
   }
@@ -44340,6 +44493,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .lg\:hover\:bg-dark:hover {
+    background-color: var(--dark);
+  }
+
   .lg\:hover\:bg-lightgray:hover {
     background-color: var(--light-gray);
   }
@@ -44918,6 +45075,10 @@ video {
 
   .lg\:focus\:bg-quartary:focus {
     background-color: var(--quartary);
+  }
+
+  .lg\:focus\:bg-dark:focus {
+    background-color: var(--dark);
   }
 
   .lg\:focus\:bg-lightgray:focus {
@@ -45640,6 +45801,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .lg\:border-dark {
+    border-color: var(--dark);
+  }
+
   .lg\:border-lightgray {
     border-color: var(--light-gray);
   }
@@ -46220,6 +46385,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .lg\:hover\:border-dark:hover {
+    border-color: var(--dark);
+  }
+
   .lg\:hover\:border-lightgray:hover {
     border-color: var(--light-gray);
   }
@@ -46798,6 +46967,10 @@ video {
 
   .lg\:focus\:border-quartary:focus {
     border-color: var(--quartary);
+  }
+
+  .lg\:focus\:border-dark:focus {
+    border-color: var(--dark);
   }
 
   .lg\:focus\:border-lightgray:focus {
@@ -48131,7 +48304,7 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .lg\:font-serif {
@@ -50452,6 +50625,10 @@ video {
     color: var(--quartary);
   }
 
+  .lg\:placeholder-dark::placeholder {
+    color: var(--dark);
+  }
+
   .lg\:placeholder-lightgray::placeholder {
     color: var(--light-gray);
   }
@@ -51030,6 +51207,10 @@ video {
 
   .lg\:focus\:placeholder-quartary:focus::placeholder {
     color: var(--quartary);
+  }
+
+  .lg\:focus\:placeholder-dark:focus::placeholder {
+    color: var(--dark);
   }
 
   .lg\:focus\:placeholder-lightgray:focus::placeholder {
@@ -51926,6 +52107,10 @@ video {
     color: var(--quartary);
   }
 
+  .lg\:text-dark {
+    color: var(--dark);
+  }
+
   .lg\:text-lightgray {
     color: var(--light-gray);
   }
@@ -52506,6 +52691,10 @@ video {
     color: var(--quartary);
   }
 
+  .lg\:hover\:text-dark:hover {
+    color: var(--dark);
+  }
+
   .lg\:hover\:text-lightgray:hover {
     color: var(--light-gray);
   }
@@ -53084,6 +53273,10 @@ video {
 
   .lg\:focus\:text-quartary:focus {
     color: var(--quartary);
+  }
+
+  .lg\:focus\:text-dark:focus {
+    color: var(--dark);
   }
 
   .lg\:focus\:text-lightgray:focus {
@@ -57075,6 +57268,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .xl\:divide-dark > :not(template) ~ :not(template) {
+    border-color: var(--dark);
+  }
+
   .xl\:divide-lightgray > :not(template) ~ :not(template) {
     border-color: var(--light-gray);
   }
@@ -57739,6 +57936,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .xl\:bg-dark {
+    background-color: var(--dark);
+  }
+
   .xl\:bg-lightgray {
     background-color: var(--light-gray);
   }
@@ -58319,6 +58520,10 @@ video {
     background-color: var(--quartary);
   }
 
+  .xl\:hover\:bg-dark:hover {
+    background-color: var(--dark);
+  }
+
   .xl\:hover\:bg-lightgray:hover {
     background-color: var(--light-gray);
   }
@@ -58897,6 +59102,10 @@ video {
 
   .xl\:focus\:bg-quartary:focus {
     background-color: var(--quartary);
+  }
+
+  .xl\:focus\:bg-dark:focus {
+    background-color: var(--dark);
   }
 
   .xl\:focus\:bg-lightgray:focus {
@@ -59619,6 +59828,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .xl\:border-dark {
+    border-color: var(--dark);
+  }
+
   .xl\:border-lightgray {
     border-color: var(--light-gray);
   }
@@ -60199,6 +60412,10 @@ video {
     border-color: var(--quartary);
   }
 
+  .xl\:hover\:border-dark:hover {
+    border-color: var(--dark);
+  }
+
   .xl\:hover\:border-lightgray:hover {
     border-color: var(--light-gray);
   }
@@ -60777,6 +60994,10 @@ video {
 
   .xl\:focus\:border-quartary:focus {
     border-color: var(--quartary);
+  }
+
+  .xl\:focus\:border-dark:focus {
+    border-color: var(--dark);
   }
 
   .xl\:focus\:border-lightgray:focus {
@@ -62110,7 +62331,7 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Source Sans Pro, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .xl\:font-serif {
@@ -64431,6 +64652,10 @@ video {
     color: var(--quartary);
   }
 
+  .xl\:placeholder-dark::placeholder {
+    color: var(--dark);
+  }
+
   .xl\:placeholder-lightgray::placeholder {
     color: var(--light-gray);
   }
@@ -65009,6 +65234,10 @@ video {
 
   .xl\:focus\:placeholder-quartary:focus::placeholder {
     color: var(--quartary);
+  }
+
+  .xl\:focus\:placeholder-dark:focus::placeholder {
+    color: var(--dark);
   }
 
   .xl\:focus\:placeholder-lightgray:focus::placeholder {
@@ -65905,6 +66134,10 @@ video {
     color: var(--quartary);
   }
 
+  .xl\:text-dark {
+    color: var(--dark);
+  }
+
   .xl\:text-lightgray {
     color: var(--light-gray);
   }
@@ -66485,6 +66718,10 @@ video {
     color: var(--quartary);
   }
 
+  .xl\:hover\:text-dark:hover {
+    color: var(--dark);
+  }
+
   .xl\:hover\:text-lightgray:hover {
     color: var(--light-gray);
   }
@@ -67063,6 +67300,10 @@ video {
 
   .xl\:focus\:text-quartary:focus {
     color: var(--quartary);
+  }
+
+  .xl\:focus\:text-dark:focus {
+    color: var(--dark);
   }
 
   .xl\:focus\:text-lightgray:focus {

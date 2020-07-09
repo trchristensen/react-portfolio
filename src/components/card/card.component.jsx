@@ -9,7 +9,7 @@ const Card = () => {
     const theme = useRecoilValue(themeState);
 
     return (
-      <div className="card max-w-full rounded-lg overflow-hidden my-4 border border-gray-700">
+      <div className="card shadow max-w-full rounded-lg overflow-hidden my-4 border border-gray-700">
         <img
           className="w-full h-56 object-cover object-center"
           src="https://i.imgur.com/6ixJb45.png"

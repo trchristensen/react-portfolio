@@ -2,6 +2,7 @@ import React from "react";
 import { themeState } from "../../atoms/themeState";
 import { activeSectionState } from "../../atoms/activeSectionState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
+import { Link, animateScroll as scroll } from "react-scroll";
 import './header.styles.scss';
 
 import { ReactComponent as SunIcon } from "../../assets/icons/SunIcon.svg";
@@ -16,27 +17,27 @@ const Header = ({ data }) => {
     {
       title: "Top",
       id: "top",
-      url: "#top",
+      url: "top",
     },
     {
       title: "About",
       id: "about",
-      url: "#about",
+      url: "about",
     },
     {
       title: "Resume",
       id: "resume",
-      url: "#resume",
+      url: "resume",
     },
     {
       title: "Work",
       id: "work",
-      url: "#work",
+      url: "work",
     },
     {
       title: "Contact",
       id: "contact",
-      url: "#contact",
+      url: "contact",
     },
   ];
 
@@ -53,7 +54,7 @@ const Header = ({ data }) => {
 
 
   return (
-    <nav className="flex items-center justify-end flex-wrap fixed w-full bg-primary xs:bottom-0 sm:bottom-0 md:bottom-0 lg:bottom-initial">
+    <nav className="flex items-center justify-end flex-wrap fixed w-full bg-primary bottom-0 lg:bottom-auto">
       <div
         className={`navbar flex w-full justify-between px-1 pr-4 py-0 lg:py-2 ${
           navOpen ? `` : `flex justify-between w-full flex-row`
@@ -74,9 +75,10 @@ const Header = ({ data }) => {
             <div className="text-sm lg:flex-grow">
               {wayPoints.map((link) =>
                 link.id !== "" ? (
-                  <a
+                  <Link
+                    to={link.url}
+                    smooth={true}
                     key={link.id}
-                    href={link.url}
                     onClick={() => setActiveSection(link.id)}
                     className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
                       activeSection === link.id
@@ -85,7 +87,7 @@ const Header = ({ data }) => {
                     }`}
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 ) : null
               )}
             </div>
@@ -95,11 +97,7 @@ const Header = ({ data }) => {
           onClick={() => setNavOpen(!navOpen)}
           className="flex items-center pt-1 pb-2 py-2 text-quartary"
         >
-          {navOpen ? (
-            <HamburgerOpen />
-          ) : (
-            <HamburgerClosed />
-          )}
+          {navOpen ? <HamburgerOpen /> : <HamburgerClosed />}
         </button>
       </div>
 
@@ -109,20 +107,21 @@ const Header = ({ data }) => {
           !navOpen ? `hidden` : ``
         } w-full block flex-grow flex-col flex w-auto h-screen`}
       >
-        <div className="menu-dropdown-container bg-gray-700">
+        <div className="menu-dropdown-container bg-gray-700 order-2">
           <div className="text-sm lg:flex-grow">
             {wayPoints.map((link) =>
               link.id !== "" ? (
-                <a
+                <Link
+                  to={link.url}
+                  smooth={true}
                   key={link.id}
                   onClick={() => setActiveSection(link.id)}
-                  href={link.url}
                   className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-2 ml-2 mb-1 ${
                     activeSection === link.id ? "text-quartary" : "text-white"
                   }`}
                 >
                   {link.title}
-                </a>
+                </Link>
               ) : null
             )}
           </div>

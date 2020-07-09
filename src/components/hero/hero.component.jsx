@@ -16,7 +16,7 @@ const Hero = (props) => {
         id="top"
         className="h-screen bg-primary flex items-center justify-center flex-wrap flex-col hero"
       >
-        <div className="container flex flex-wrap flex-col text-center px-10">
+        <div className="container flex flex-wrap flex-col text-center px-4">
           <h2 className="text-secondary mb-0 text-3xl lg:text-6xl">
             Todd Christensen
           </h2>

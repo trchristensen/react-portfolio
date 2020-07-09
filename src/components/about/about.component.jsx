@@ -18,10 +18,13 @@ const About = () => {
         className="min-h-screen bg-primary flex items-center justify-center
           flex-wrap text-primary"
       >
-        <div className="container flex m-auto px-10 lg:px-16">
+        <div className="container flex flex-col m-auto py-20 px-4 lg:px-16">
+          <h2 className="text-secondary mb-10 lg:mb-0 text-3xl">
+            <span className="border-b-2 border-quartary">About Me</span>
+          </h2>
           <Waypoint onEnter={() => setActiveSection("about")} />
-          <div className="row flex flex-row flex-wrap w-full">
-            <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-center content-center">
+          <div className="row flex flex-row flex-wrap w-full mt-8">
+            <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-start content-start p-4">
               <img
                 className="profile-pic"
                 src="https://avatars0.githubusercontent.com/u/6512813?s=460&amp;u=95c2a1f2bb132eeab6d7e4bb01871b61e4287ab6&amp;v=4"
@@ -29,13 +32,12 @@ const About = () => {
               />
             </div>
             <div className="w-full lg:w-2/3 about-right flex flex-wrap content-center">
-              <h2 className="text-secondary text-3xl mb-4">About Me</h2>
               <p className="text-secondary mb-4">
                 I am a practical, self-taught developer from the Bay Area, CA
-                with more than 5 years of professional experience. I got into coding to
-                translate my ideas into reality (also, to customize my MySpace profile). I have an entreprenuerial
-                spirit with a passion for building useful applications and
-                solving problems.
+                with more than 5 years of professional experience. I got into
+                coding to translate my ideas into reality (also, to customize my
+                MySpace profile). I have an entreprenuerial spirit with a
+                passion for building useful applications and solving problems.
               </p>
               <p className="text-secondary mb-4">
                 Experience with LAMP, MERN, and JAM stacks. Professional
@@ -56,7 +58,12 @@ const About = () => {
                 <div className="w-full lg:w-1/2">
                   <h2 className="text-secondary">Contact Details</h2>
                   <p>Address</p>
-                  <p className="text-secondary primary-font mb-4">Testing contact email <a href="mailto:hello@toddchristensen.net">hello@toddchristensen.net</a></p>
+                  <p className="text-secondary primary-font mb-4">
+                    Testing contact email{" "}
+                    <a href="mailto:hello@toddchristensen.net">
+                      hello@toddchristensen.net
+                    </a>
+                  </p>
                 </div>
                 <div className="w-full w-1/2">
                   <button

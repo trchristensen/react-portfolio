@@ -48,7 +48,7 @@ const SocialBar = () => {
 
   return (
     <>
-      <div className="sidebar__social items-start lg:items-center pt-4 lg:pt-0">
+      <div className="sidebar__social items-start hidden lg:flex lg:items-center pt-4 lg:pt-0">
         <ul className="social">
           {social.map((network) => (
             <li key={network.name}>

@@ -16,6 +16,7 @@ module.exports = {
       secondary: "var(--secondary)",
       tertiary: "var(--tertiary)",
       quartary: "var(--quartary)",
+      dark: "var(--dark)",
       lightgray: "var(--light-gray)",
 
       transparent: "transparent",
@@ -241,6 +242,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Source Sans Pro",
         "system-ui",
         "-apple-system",
         "BlinkMacSystemFont",
