@@ -53,7 +53,7 @@ const Header = ({ data }) => {
 
 
   return (
-    <nav className="flex items-center justify-end flex-wrap fixed w-full lg:bg-primary">
+    <nav className="flex items-center justify-end flex-wrap fixed w-full bg-primary xs:bottom-0 sm:bottom-0 md:bottom-0 lg:bottom-initial">
       <div
         className={`navbar flex w-full justify-between px-1 pr-4 py-0 lg:py-2 ${
           navOpen ? `` : `flex justify-between w-full flex-row`

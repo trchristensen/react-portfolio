@@ -12,9 +12,9 @@
     overflow: hidden;
     align-items: center;
     justify-content: center;
-
-             padding-top: 15px;
-padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 38px;
   }
 
   .social li {
@@ -23,9 +23,9 @@ padding-bottom: 15px;
     padding: 0;
     border: 1px solid transparent;
     a {
-      padding: 8px;
-      width: 32px;
-      height: 32px;
+      padding: 8px 8px 8px 7px;
+      // width: 32px;
+      // height: 32px;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: center;
@@ -35,11 +35,12 @@ padding-bottom: 15px;
       -webkit-transition-timing-function: ease-in-out;
       -o-transition-timing-function: ease-in-out;
       transition-timing-function: ease-in-out;
-      -webkit-transition-delay: 1s;
-      -o-transition-delay: 1s;
-      transition-delay: 1s;
+      transition-duration: 0.25s;
       color: var(--quartary);
-  
+      font-size: 15px;
+      &:hover {
+        font-size: 22px;
+      }
     }
   }
 }

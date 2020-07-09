@@ -44,19 +44,24 @@ const SocialBar = () => {
     },
   ];
 
+  
 
   return (
-    <div className="sidebar__social items-start lg:items-center pt-4 lg:pt-0">
-      <ul className="social">
-        {social.map((network) => (
-          <li key={network.name}>
-            <a href={network.url}>
-              <FontAwesomeIcon icon={network.icon} />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className="sidebar__social items-start lg:items-center pt-4 lg:pt-0">
+        <ul className="social">
+          {social.map((network) => (
+            <li key={network.name}>
+              <a
+                href={network.url}
+              >
+                <FontAwesomeIcon icon={network.icon} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
   
 };

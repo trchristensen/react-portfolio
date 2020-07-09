@@ -1,10 +1,13 @@
 import React from 'react';
-
+import { useRecoilValue } from 'recoil';
+import { themeState } from '../../atoms/themeState';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle, faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Card = () => {
+    const theme = useRecoilValue(themeState);
+
     return (
       <div className="card max-w-full bg-primary rounded-lg overflow-hidden my-4">
         <img
@@ -30,33 +33,33 @@ const Card = () => {
           </span>
         </div>
         <div className="py-4 px-6">
-          <h3 className="text-2xl font-semibold text-gray-800">
+          <h3 className="text-2xl font-semibold text-secondary">
             Binance Taker Trades
           </h3>
-          <p className="py-2 text-md text-gray-700">
+          <p className={`${theme === 'dark' ? `text-gray-400` : `text-gray-700`} py-2 text-md`}>
             A cryptocurrency market order volume monitor. Using Binance
             exchange's API, it manipulates data and displays it live on the
             front-end in a sortable and easy to consume table.
           </p>
-          <div className="flex items-center mt-2 text-gray-700">
+          <div className="flex items-center mt-2">
             <FontAwesomeIcon icon={faInfoCircle} />
             <span className="px-2 text-sm">
               <button href="#">Get More Info</button>
             </span>
           </div>
-          <div className="flex items-center mt-2 text-gray-700">
+          <div className="flex items-center mt-2">
             <FontAwesomeIcon icon={faExternalLinkAlt} />
             <span className="px-2 text-sm">
               <button href="#">Visit Site</button>
             </span>
           </div>
-          <div className="flex items-center mt-2 text-gray-700">
+          <div className="flex items-center mt-2">
             <FontAwesomeIcon icon={faGithub} />
             <span className="px-2 text-sm">
               <button href="#">View Server Code</button>
             </span>
           </div>
-          <div className="flex items-center mt-2 text-gray-700">
+          <div className="flex items-center mt-2">
             <FontAwesomeIcon icon={faGithub} />
             <span className="px-2 text-sm"><button href="#">View Client Code</button></span>
           </div>
