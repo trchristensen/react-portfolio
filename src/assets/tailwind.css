@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 .theme-light {
-    --primary: #fff;
-    --secondary: #252A32;
-    --tertiary: #00ff9f;
-    --quartary: #ff7d42;
+    --primary: #FAFAFB;
+    --secondary: #2f3337;
+    --tertiary: #b8dcf5;
+    --quartary: #0095ff;
 }
 
 .theme-dark {
-    --primary: #252A32;
-    --secondary: #fff;
-    --tertiary: #00ff9f;
-    --quartary: #ff7d42;
+    --primary: #2f3337 ;
+    --secondary: #e7e8eb;
+    --tertiary: #0095ff;
+    --quartary: #b8dcf5;
 }
 
 :root {

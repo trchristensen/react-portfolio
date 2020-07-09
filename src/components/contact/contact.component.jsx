@@ -34,6 +34,8 @@ const Contact = () => {
 
   }
 
+  const renders = React.useRef(0);
+
   return (
     <>
       <section
@@ -42,16 +44,17 @@ const Contact = () => {
       >
         <Waypoint onEnter={() => setActiveSection("contact")} />
         <h2 className="text-secondary">Contact</h2>
+        <h1 className="text-xl3 text-secondary font-primary">{renders.current++}</h1>
         <div className="container">
           <form
             onSubmit={handleSubmit}
             id="contact-me"
-            className="w-full mx-auto max-w-3xl bg-white shadow p-8 text-gray-700 "
+            className="w-full mx-auto max-w-3xl bg-quartary shadow p-8 text-gray-700 "
           >
             <div className="flex flex-wrap mb-6">
               <div className="relative w-full appearance-none label-floating">
                 <input
-                  className="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:border-gray-500"
+                  className="bg-primary tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:border-gray-500"
                   id="name"
                   type="text"
                   value={nameInput}
@@ -71,7 +74,7 @@ const Contact = () => {
             <div className="flex flex-wrap mb-6">
               <div className="relative w-full appearance-none label-floating">
                 <input
-                  className="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:border-gray-500"
+                  className="bg-primary tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:border-gray-500"
                   id="email"
                   type="text"
                   placeholder="Your email"
@@ -91,7 +94,7 @@ const Contact = () => {
             <div className="flex flex-wrap mb-6">
               <div className="relative w-full appearance-none label-floating">
                 <textarea
-                  className="autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:border-gray-500"
+                  className="bg-primary autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:border-gray-500"
                   id="message"
                   type="text"
                   placeholder="Message..."

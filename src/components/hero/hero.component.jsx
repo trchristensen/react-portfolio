@@ -20,14 +20,14 @@ const Hero = (props) => {
           <h2 className="text-secondary mb-0 text-3xl lg:text-6xl">
             Todd Christensen
           </h2>
-          <h3 className="text-quartary text-lg lg:text-3xl">React Software Engineer</h3>
+          <h3 className="text-quartary text-lg lg:text-3xl">React.js Software Engineer</h3>
           <span className="primary-font mt-3 inline-block description">
             I'm a remote based software engineer from California, currently
             residing in the Philippines{" "}
             <span role="img" aria-label="Philippines Flag">
               🇵🇭
             </span>
-            . I am currently looking for a position!
+            . I am looking for a position, either remote or location-based.
           </span>
         </div>
       </section>

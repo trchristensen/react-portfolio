@@ -32,8 +32,8 @@ const About = () => {
               <h2 className="text-secondary text-3xl mb-4">About Me</h2>
               <p className="text-secondary mb-4">
                 I am a practical, self-taught developer from the Bay Area, CA
-                with more than 5 years of experience. I got into coding to
-                translate my ideas into reality. I have an entreprenuerial
+                with more than 5 years of professional experience. I got into coding to
+                translate my ideas into reality (also, to customize my MySpace profile). I have an entreprenuerial
                 spirit with a passion for building useful applications and
                 solving problems.
               </p>
@@ -56,6 +56,7 @@ const About = () => {
                 <div className="w-full lg:w-1/2">
                   <h2 className="text-secondary">Contact Details</h2>
                   <p>Address</p>
+                  <p className="text-secondary primary-font mb-4">Testing contact email <a href="mailto:hello@toddchristensen.net">hello@toddchristensen.net</a></p>
                 </div>
                 <div className="w-full w-1/2">
                   <button

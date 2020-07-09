@@ -1,12 +1,11 @@
 .hero {
-  
   //   background-attachment: scroll;
   background-attachment: fixed;
   background-size: auto;
   background-repeat: repeat;
   background-position: center center;
   .container {
-    width: 860px;
+    width: 675px;
     max-width: 100%;
     // background: linear-gradient(145deg, #20252c, #272c34);
     // box-shadow: 20px 20px 60px #1f232a, -20px -20px 60px #292f38;
@@ -20,7 +19,7 @@
     // font-size: 112px;
     // line-height: 0.95;
     // letter-spacing: 0.05em;
-    background: linear-gradient(90deg, #eec2ae 0%, #ff7d42 32%);
+    background: linear-gradient(90deg, #eee 0%, var(--quartary) 32%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,7 +28,7 @@
     text-transform: uppercase;
     line-height: normal;
     letter-spacing: 0.25rem;
-    border-bottom: 1px solid #ff7d42;
+    border-bottom: 1px solid var(--quartary);
     padding-bottom: 10px;
   }
 
@@ -54,7 +53,6 @@
     font-family: "Roboto", sans-serif;
   }
 }
-
 
 .theme-light {
   .hero {
