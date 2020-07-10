@@ -14634,15 +14634,15 @@ video {
 .theme-light {
   --primary: #FAFAFB;
   --secondary: #2f3337;
-  --tertiary: #b8dcf5;
-  --quartary: #0095ff;
+  --tertiary: #e0f6ce;
+  --quartary: #65bb5c;
 }
 
 .theme-dark {
   --primary: #2f3337 ;
   --secondary: #e7e8eb;
-  --tertiary: #0095ff;
-  --quartary: #b8dcf5;
+  --tertiary: #65bb5c;
+  --quartary: #e0f6ce;
   --dark: #1C1F23;
 }
 

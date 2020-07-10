@@ -34,22 +34,25 @@ const Contact = () => {
 
   }
 
-  const renders = React.useRef(0);
+
 
   return (
     <>
       <section
         id="contact"
-        className="h-screen bg-primary flex items-center justify-center flex-col"
+        className="bg-primary flex items-center justify-center flex-col"
       >
         <Waypoint onEnter={() => setActiveSection("contact")} />
-        <h2 className="text-secondary">Contact</h2>
-        <h1 className="text-xl3 text-secondary font-primary">{renders.current++}</h1>
-        <div className="container px-4">
+        <div className="container flex flex-col m-auto pt-20 pb-10 px-4">
+          <h2 className="text-secondary mb-10 lg:mb-0 text-3xl ">
+            <span className="border-b-2 border-quartary">Contact Me</span>
+          </h2>
+        </div>
+        <div className="container px-4 pb-20">
           <form
             onSubmit={handleSubmit}
             id="contact-me"
-            className="w-full mx-auto max-w-3xl bg-dark rounded-lg shadow p-8 text-gray-700 "
+            className="w-full mx-auto max-w-3xl bg-dark rounded-lg shadow p-8 text-gray-700 border border-gray-700"
           >
             <div className="flex flex-wrap mb-6">
               <div className="relative w-full appearance-none label-floating">
@@ -112,7 +115,7 @@ const Contact = () => {
 
             <div className="">
               <button
-                className="w-full shadow focus:outline-none font-bold py-2 px-4 rounded text-lightgray border-gray-700"
+                className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700"
                 type="submit"
               >
                 Send

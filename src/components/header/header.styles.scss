@@ -1,11 +1,23 @@
 nav {
   z-index: 99;
-  a {
+  a,
+  button {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1;
     font-family: "walsheim", sans-serif;
     font-size: 12px;
     letter-spacing: 0.1em;
+  }
+}
+
+@media (min-width:1024px) {
+  .nav__primary {
+    .navbar {
+      order: 1;
+    }
+    .menu-dropdown {
+      order: 2;
+    }
   }
 }

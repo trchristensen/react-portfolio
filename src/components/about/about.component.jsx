@@ -15,10 +15,10 @@ const About = () => {
     <>
       <section
         id="about"
-        className="min-h-screen bg-primary flex items-center justify-center
+        className="bg-primary flex items-center justify-center
           flex-wrap text-primary"
       >
-        <div className="container flex flex-col m-auto py-20 px-4 lg:px-16">
+        <div className="container flex flex-col m-auto py-20 px-4 border-b-2 border-gray-700">
           <h2 className="text-secondary mb-10 lg:mb-0 text-3xl">
             <span className="border-b-2 border-quartary">About Me</span>
           </h2>
@@ -35,14 +35,13 @@ const About = () => {
               <p className="text-secondary mb-4">
                 I am a practical, self-taught developer from the Bay Area, CA
                 with more than 5 years of professional experience. I got into
-                coding to translate my ideas into reality (also, to customize my
-                MySpace profile). I have an entreprenuerial spirit with a
+                coding to translate my ideas into reality. I have an entreprenuerial spirit with a
                 passion for building useful applications and solving problems.
               </p>
               <p className="text-secondary mb-4">
                 Experience with LAMP, MERN, and JAM stacks. Professional
                 experience at a Design Agency collaborating on a small team,
-                taking on several responsibilities, including social media
+                taking on several responsibilities, including development, social media
                 marketing, and project manager for a brief period. As a software
                 engineer, I have experience with several programming languages
                 and frameworks including Ruby Rails, Wordpress and Laravel with
