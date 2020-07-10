@@ -18,13 +18,7 @@
 
   .social li {
     display: inline-block;
-    margin: 0 5px 0 0;
-    padding: 0;
-    border: 1px solid transparent;
     a {
-      padding: 8px 8px 8px 7px;
-      // width: 32px;
-      // height: 32px;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: center;
@@ -36,10 +30,11 @@
       transition-timing-function: ease-in-out;
       transition-duration: 0.25s;
       color: var(--quartary);
-      font-size: 15px;
+      // font-size: 15px;
       &:hover {
         font-size: 22px;
       }
+
     }
   }
 }

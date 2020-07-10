@@ -34,7 +34,7 @@ const Card = (props) => {
             return (
               <div
                 key={index}
-                className="flex items-center mt-2 text-secondary lg:w-1/2"
+                className="flex items-center mt-2 text-secondary w-1/2 min-w-1/2"
               >
                 <FontAwesomeIcon icon={link.fa_icon} />
                 <span className="px-2 text-sm">

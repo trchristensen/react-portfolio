@@ -48,12 +48,13 @@ const SocialBar = () => {
 
   return (
     <>
-      <div className="sidebar__social items-start hidden lg:flex lg:items-center pt-4 lg:pt-0">
+      <div className="sidebar__social items-start hidden lg:flex lg:items-center ml-4 pt-4 lg:pt-0">
         <ul className="social">
           {social.map((network) => (
             <li key={network.name}>
               <a
                 href={network.url}
+                className="lg:p-2 text-lg"
               >
                 <FontAwesomeIcon icon={network.icon} />
               </a>

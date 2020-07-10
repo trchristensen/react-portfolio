@@ -11,7 +11,7 @@ nav {
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .nav__primary {
     .navbar {
       order: 1;
@@ -19,5 +19,47 @@ nav {
     .menu-dropdown {
       order: 2;
     }
+  }
+}
+
+.menu-dropdown {
+  display: block !important;
+  position: fixed;
+  height: 100vh;
+  width: 70%;
+  top: 0;
+  bottom: 0;
+  right: -70%;
+  z-index: 99;
+}
+
+.nav__primary-open {
+  .menu-dropdown {
+    right: 0;
+    animation:  simpleSlideNavIn .5s ease-in-out;
+  }
+  .meat {
+    transform: translateX(-70%);
+    height: 100%;
+    overflow: hidden;
+    animation: simpleSlideMeatOut .5s ease-in-out;
+  }
+}
+
+@keyframes simpleSlideMeatOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(-70%);
+  }
+}
+
+@keyframes simpleSlideNavIn {
+  0% {
+    right: -70%;
+  }
+  100% {
+    right: 0;
   }
 }

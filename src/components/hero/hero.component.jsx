@@ -12,18 +12,24 @@ const Hero = (props) => {
   const theme = useRecoilValue(themeState);
   
   return (
-    <> 
+    <>
       <Waypoint onEnter={() => setActiveSection("top")} />
       <section
         id="top"
-        className="h-screen bg-primary flex items-center justify-center flex-wrap flex-col hero"
+        className="min-h-screen bg-primary flex items-center justify-center flex-wrap flex-col hero"
       >
-        <div className="container flex flex-wrap flex-col text-center px-4">
-          <h2 className="text-secondary mb-0 text-3xl lg:text-6xl">
+        <div className="container flex flex-wrap flex-col text-center px-4 py-20 -mt-56 lg:m-0">
+          <h2 className="text-secondary mb-0 text-4xl lg:text-6xl">
             Todd Christensen
           </h2>
-          <h3 className="text-quartary text-lg lg:text-3xl">React.js Software Engineer</h3>
-          <span className={`primary-font mt-3 inline-block description ${theme === 'dark' ? `text-gray-400`: `text-gray-700`}`}>
+          <h3 className="text-quartary text-lg lg:text-3xl">
+            React.js Software Engineer
+          </h3>
+          <span
+            className={`primary-font mt-3 inline-block description ${
+              theme === "dark" ? `text-gray-400` : `text-gray-700`
+            }`}
+          >
             I'm a remote based software engineer from California, currently
             residing in the Philippines{" "}
             <span role="img" aria-label="Philippines Flag">

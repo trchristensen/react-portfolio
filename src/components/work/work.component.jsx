@@ -16,15 +16,15 @@ const Work = () => {
     <>
       <section
         id="work"
-        className="flex items-center flex-col justify-center w-full bg-primary"
+        className="bg-primary flex items-center justify-center flex-wrap text-primary"
       >
         <Waypoint onEnter={() => setActiveSection("work")} />
-        <div className="container flex flex-col m-auto pt-20 pb-10 px-4 pt-20">
+        <div className="container flex flex-col m-auto pt-20 pb-0 px-4 lg:px-20">
           <h2 className="text-secondary mb-10 lg:mb-0 text-3xl ">
             <span className="border-b-2 border-quartary">Work</span>
           </h2>
         </div>
-        <div className="container flex flex-col pb-20 px-4 lg:px-16 flex-wrap items-center justify-center border-b-2 border-gray-700">
+        <div className="container flex flex-col m-auto pt-20 pb-10 px-4 lg:px-20">
           <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows gap-4">
             {workData.map((item, index) => {
               return <Card key={index} data={item} />;
@@ -137,4 +137,5 @@ const workData = [
       },
     ],
   },
+  
 ];
