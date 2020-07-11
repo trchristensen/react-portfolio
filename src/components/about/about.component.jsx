@@ -58,17 +58,7 @@ const About = () => {
                 in the Philippines.
               </p>
               <div className="row flex flex-row flex-wrap w-full mt-12">
-                <div className="w-full lg:w-1/2">
-                  <h2 className="text-secondary">Contact Details</h2>
-                  <p>Address</p>
-                  <p className="text-secondary primary-font mb-4">
-                    Testing contact email{" "}
-                    <a href="mailto:hello@toddchristensen.net">
-                      hello@toddchristensen.net
-                    </a>
-                  </p>
-                </div>
-                <div className="w-full w-1/2">
+                <div className="w-full">
                   <button
                     href="#"
                     className="button btn neu-convex text-secondary"

@@ -15,16 +15,14 @@ const Card = (props) => {
       />
       <div className="flex flex-wrap items-center px-6 py-1">
         {props.data.tags.map((tag) => (
-          <span className="py-1 px-2 no-underline bg-primary btn-shadow text-secondary border rounded-md border-secondary font-primary text-xs btn-primary focus:outline-none active:shadow-none mr-2 my-1">
+          <span className="py-1 px-2 mr-2 my-1 no-underline bg-primary btn-shadow text-secondary border rounded-md border-gray-700 border-opacity-75 font-primary text-xs">
             {tag}
           </span>
         ))}
       </div>
       <div className="py-4 px-6 flex flex-col flex-wrap">
         <div>
-          <h3 className="text-2xl font-semibold text-secondary">
-            {props.data.title}
-          </h3>
+          <h3 className="text-2xl text-secondary">{props.data.title}</h3>
           <p className={`text-secondary py-2 text-md`}>
             {props.data.description}
           </p>

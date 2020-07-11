@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.scss";
+import "react-toastify/dist/ReactToastify.css";
+
 import { useRecoilValue } from "recoil";
 import useLocalStorage from "./hooks/useLocalStorage";
 import ReactGA from "react-ga";

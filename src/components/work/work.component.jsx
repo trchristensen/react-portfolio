@@ -44,7 +44,7 @@ const workData = [
     description:
       "A neighbor social media platform for the Philippines. Connects neighbors with each other.",
     image: {
-      src: "https://i.imgur.com/6ixJb45.png",
+      src: "https://via.placeholder.com/300",
     },
     tags: [
       "React",
@@ -93,12 +93,12 @@ const workData = [
         fa_icon: faExternalLinkAlt,
       },
       {
-        text: "View Server Code",
+        text: "Server Code",
         url: "#",
         fa_icon: faGithub,
       },
       {
-        text: "View Client Code",
+        text: "Client Code",
         url: "#",
         fa_icon: faGithub,
       },
@@ -109,7 +109,7 @@ const workData = [
     description:
       "ToddChristensen.net.. This site. The one you're on right now.",
     image: {
-      src: "https://i.imgur.com/6ixJb45.png",
+      src: "https://via.placeholder.com/300",
     },
     tags: [
       "React",
@@ -137,5 +137,4 @@ const workData = [
       },
     ],
   },
-  
 ];

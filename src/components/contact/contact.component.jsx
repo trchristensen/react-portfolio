@@ -1,39 +1,46 @@
 import React, { useState } from "react";
-import './contact.styles.scss';
+import "./contact.styles.scss";
 import { useSetRecoilState } from "recoil";
 import { Waypoint } from "react-waypoint";
 import { activeSectionState } from "../../atoms/activeSectionState";
+import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const setActiveSection = useSetRecoilState(activeSectionState);
 
-  const [nameInput, setNameInput] = useState('');
-  const [emailInput, setEmailInput] = useState("");
-  const [messageInput, setMessageInput] = useState("");
+  const { register, errors, handleSubmit, getValues } = useForm({
+    mode: "onChange",
+    reValidateMode: "onChange",
+  });
 
-  const handleNameInput = (event) => {
-    setNameInput(event.target.value);
+  let templateParams = {
+    from_name: getValues("email"),
+    to_name: "user_csdQtDEEHHEjrSfmMfk8Rz",
+    name: getValues("name"),
+    message_html: getValues("message"),
   };
 
-  const handleEmailInput = (event) => {
-    setEmailInput(event.target.value);
+  const onSubmit = (data) => {
+    console.log(data);
+    console.log(templateParams);
+    emailjs
+      .send(
+        "gmail",
+        "template_7Y1aKv5g",
+        templateParams,
+        "user_csdQtDEEHHEjrSfmMfk8R"
+      )
+      .then(
+        (result) => {
+          toast(result.text);
+        },
+        (error) => {
+          toast(error.text)
+        }
+      );
   };
-
-  const handleMessageInput = (event) => {
-    setMessageInput(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const PAYLOAD = {
-      name: nameInput,
-      email: emailInput,
-      message: messageInput
-    }
-    alert(JSON.stringify(PAYLOAD));
-
-  }
-
 
 
   return (
@@ -49,79 +56,82 @@ const Contact = () => {
           </h2>
         </div>
         <div className="container flex flex-col m-auto pt-20 pb-10 px-4 lg:px-20">
-          <form
-            onSubmit={handleSubmit}
-            id="contact-me"
-            className="w-full mx-auto max-w-3xl bg-dark rounded-lg shadow p-8 text-gray-700 border border-gray-700"
-          >
-            <div className="flex flex-wrap mb-6">
-              <div className="relative w-full appearance-none label-floating">
-                <input
-                  className="bg-primary tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
-                  id="name"
-                  type="text"
-                  value={nameInput}
-                  onChange={handleNameInput}
-                  placeholder="Your name"
-                  required
-                />
-                <label
-                  htmlFor="name"
-                  className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
-                >
-                  Your name
-                </label>
+          <div className="w-full mx-auto max-w-3xl bg-dark rounded-lg shadow p-8 text-gray-700 border border-gray-700">
+            <form onSubmit={handleSubmit(onSubmit)} className="text-secondary">
+              <div className="flex flex-wrap mb-6">
+                <div className="relative w-full appearance-none label-floating">
+                  <input
+                    name="email"
+                    ref={register({ required: true })}
+                    className="bg-primary tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
+                    id="email"
+                    type="email"
+                    placeholder="Your email"
+                    required
+                  />
+                  <label
+                    htmlFor="name"
+                    className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
+                  >
+                    Your name
+                  </label>
+                  {errors.email && "Email is required"}
+                </div>
               </div>
-            </div>
-
-            <div className="flex flex-wrap mb-6">
-              <div className="relative w-full appearance-none label-floating">
-                <input
-                  className="bg-primary tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
-                  id="email"
-                  type="text"
-                  placeholder="Your email"
-                  value={emailInput}
-                  onChange={handleEmailInput}
-                  required
-                />
-                <label
-                  htmlFor="email"
-                  className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
-                >
-                  Your email
-                </label>
+              <div className="flex flex-wrap mb-6">
+                <div className="relative w-full appearance-none label-floating">
+                  <input
+                    name="name"
+                    ref={register({ required: true })}
+                    className="bg-primary tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
+                  <label
+                    htmlFor="name"
+                    className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
+                  >
+                    Your name
+                  </label>
+                  {errors.name && "Name is required"}
+                </div>
               </div>
-            </div>
-
-            <div className="flex flex-wrap mb-6">
-              <div className="relative w-full appearance-none label-floating">
-                <textarea
-                  className="bg-primary autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
-                  id="message"
-                  type="text"
-                  placeholder="Message..."
-                  value={messageInput}
-                  onChange={handleMessageInput}
-                ></textarea>
-                <label
-                  htmlFor="message"
-                  className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
-                >
-                  Message...
-                </label>
+              <div className="flex flex-wrap mb-6">
+                <div className="relative w-full appearance-none label-floating">
+                  <input
+                    className="bg-primary autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
+                    type="text"
+                    name="message"
+                    placeholder="Message..."
+                    ref={register({ required: true })}
+                  />
+                  <label
+                    htmlFor="message"
+                    className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
+                  ></label>
+                  {errors.message && "message is required"}
+                </div>
               </div>
-            </div>
-
-            <div className="">
-              <button
+              <div
+                className={`mb-6 gcaptcha ${
+                  getValues("email") ? `` : `hidden`
+                }`}
+              >
+                <div
+                  className="g-recaptcha"
+                  data-sitekey="6LetJbAZAAAAAKhIDCmYzsQ5i2jTd4iRBKfKIjn_"
+                ></div>
+              </div>
+              <input
                 className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700"
                 type="submit"
-              >
-                Send
-              </button>
-            </div>
-          </form>
+                value="Send"
+              />
+            </form>
+            <ToastContainer />
+          </div>
         </div>
       </section>
     </>

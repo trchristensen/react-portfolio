@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "emailjs-com": "^2.4.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -19,6 +20,7 @@
     "react-scroll": "^1.7.16",
     "react-spring": "^8.0.27",
     "react-tailwindcss": "^1.0.0",
+    "react-toastify": "^6.0.8",
     "react-waypoint": "^9.0.3",
     "recoil": "^0.0.10",
     "tailwindcss": "^1.4.6"

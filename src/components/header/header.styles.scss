@@ -36,13 +36,13 @@ nav {
 .nav__primary-open {
   .menu-dropdown {
     right: 0;
-    animation:  simpleSlideNavIn .5s ease-in-out;
+    animation: simpleSlideNavIn 0.5s ease-in-out;
   }
   .meat {
     transform: translateX(-70%);
     height: 100%;
     overflow: hidden;
-    animation: simpleSlideMeatOut .5s ease-in-out;
+    animation: simpleSlideMeatOut 0.5s ease-in-out;
   }
 }
 
@@ -58,6 +58,41 @@ nav {
 @keyframes simpleSlideNavIn {
   0% {
     right: -70%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-dropdown {
+    width: 40%;
+    right: -40%;
+  }
+
+  .nav__primary-open {
+    .menu-dropdown {
+      animation: simpleSlideNavIn 0.5s ease-in-out;
+    }
+    .meat {
+      transform: translateX(-40%);
+      animation: simpleSlideMeatOut 0.5s ease-in-out;
+    }
+  }
+}
+
+@keyframes simpleSlideMeatOutLarge {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+
+@keyframes simpleSlideNavInLarge {
+  0% {
+    right: -40%;
   }
   100% {
     right: 0;
