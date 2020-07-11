@@ -111,7 +111,7 @@ const Resume = () => {
                     jQuery, Gulp, and git version control.
                   </li>
                   <li>
-                    Assisted in developmont of a custom wordpress plugin that
+                    Assisted in development of a custom wordpress plugin that
                     syncs product and template data between dealer sites,
                     keeping them up to date with the latest product information.
                   </li>

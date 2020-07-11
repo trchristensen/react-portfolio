@@ -36,11 +36,11 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast(result.text);
+          toast.success('Your message has been set!');
           setSending(false);
         },
         (error) => {
-          toast(error.text)
+          toast.error('Error: technical speak: ' + error.text)
           setSending(false);
         }
       );
@@ -129,10 +129,9 @@ const Contact = () => {
                 ></div>
               </div>
               <input
-                className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700"
+                className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700 pointer-cursor"
                 type="submit"
                 value={sending ? `Sending...` : `Send`}
-                disabled={sending ? `true` : `false`}
               />
             </form>
             <ToastContainer />
