@@ -79,6 +79,7 @@ const Header = ({ data }) => {
       document.body.classList.remove("nav__primary-open");
       document.removeEventListener("mousedown", handleClickOutside);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navOpen]);
 
 

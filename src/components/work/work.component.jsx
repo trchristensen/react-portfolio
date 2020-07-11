@@ -44,7 +44,8 @@ const workData = [
     description:
       "A neighbor social media platform for the Philippines. Connects neighbors with each other.",
     image: {
-      src: "https://via.placeholder.com/300",
+      // src: "https://via.placeholder.com/300",
+      src: ''
     },
     tags: [
       "React",
@@ -78,7 +79,8 @@ const workData = [
     description:
       "A cryptocurrency market order volume monitor. Using Binance exchange's API, it manipulates data and displays it live on the front-end in a sortable and easy to consume table.",
     image: {
-      src: "https://i.imgur.com/6ixJb45.png",
+      // src: "https://i.imgur.com/6ixJb45.png",
+      src: '',
     },
     tags: ["VueJs", "Node.js", "Express", "Redis", "TailwindCSS"],
     links: [
@@ -109,7 +111,8 @@ const workData = [
     description:
       "ToddChristensen.net.. This site. The one you're on right now.",
     image: {
-      src: "https://via.placeholder.com/300",
+      // src: "https://via.placeholder.com/300",
+      src: '',
     },
     tags: [
       "React",

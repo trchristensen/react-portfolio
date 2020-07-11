@@ -132,6 +132,7 @@ const Contact = () => {
                 className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700"
                 type="submit"
                 value={sending ? `Sending...` : `Send`}
+                disabled={sending ? `true` : `false`}
               />
             </form>
             <ToastContainer />

@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { useRecoilValue } from "recoil";
 import useLocalStorage from "./hooks/useLocalStorage";
-import ReactGA from "react-ga";
+// import ReactGA from "react-ga";
 
 import Header from "./components/header/header.component";
 import Hero from "./components/hero/hero.component";
@@ -20,8 +20,8 @@ import { themeState } from "./atoms/themeState";
 
 
 const App = () => {
-  ReactGA.initialize("UA-225799922");
-  ReactGA.pageview(window.location.pathname);
+  // ReactGA.initialize("UA-225799922");
+  // ReactGA.pageview(window.location.pathname);
 
   const [, setPersistedTheme] = useLocalStorage("themeState", "light");
   const theme = useRecoilValue(themeState);
