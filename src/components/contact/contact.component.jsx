@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const setActiveSection = useSetRecoilState(activeSectionState);
+  const [sending, setSending] = useState(false);
 
   const { register, errors, handleSubmit, getValues } = useForm({
     mode: "onChange",
@@ -23,6 +24,7 @@ const Contact = () => {
   };
 
   const onSubmit = (data) => {
+    setSending(true);
     console.log(data);
     console.log(templateParams);
     emailjs
@@ -35,9 +37,11 @@ const Contact = () => {
       .then(
         (result) => {
           toast(result.text);
+          setSending(false);
         },
         (error) => {
           toast(error.text)
+          setSending(false);
         }
       );
   };
@@ -127,7 +131,7 @@ const Contact = () => {
               <input
                 className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700"
                 type="submit"
-                value="Send"
+                value={sending ? `Sending...` : `Send`}
               />
             </form>
             <ToastContainer />
