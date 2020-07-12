@@ -73,7 +73,7 @@ const Resume = () => {
                   </li>
                 </ul>
                 <p className="mb-2 text-secondary text-secondary">
-                  During this time, I have also attained a deep knowledge of
+                  During this time, I have attained a deep knowledge of
                   javascript ES6, React and related libraries, GraphQL with
                   Apollo-- working on several <a href="#work">side projects</a>.
                 </p>

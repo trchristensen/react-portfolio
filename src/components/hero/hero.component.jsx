@@ -18,7 +18,7 @@ const Hero = (props) => {
         id="top"
         className="min-h-screen bg-primary flex items-center justify-center flex-wrap flex-col hero"
       >
-        <div className="container flex flex-wrap flex-col text-center px-4 py-20 -mt-56 lg:m-0">
+        <div className="container flex flex-wrap flex-col text-center px-4 py-20 mb-40 lg:m-0 lg:-mt-8">
           <h2 className="text-secondary mb-0 text-4xl lg:text-6xl">
             Todd Christensen
           </h2>

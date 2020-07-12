@@ -36,12 +36,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast.success('Your message has been set!');
+          toast.success('Your message has been sent!');
           setSending(false);
           reset();
         },
         (error) => {
-          toast.error('ERROR (technical speak): ' + error.text)
+          error.text === "The g-recaptcha-response parameter not found"
+          ? toast.error('Please make sure you check the Captcha box.')
+          : toast.error('ERROR (technical speak): ' + error.text)
+
           setSending(false);
           reset();
         }
@@ -130,21 +133,23 @@ const Contact = () => {
                 ></div>
               </div>
               <div className="row flex flex-row flex-wrap w-full">
-                <div className="w-full md:w-3/4 flex">
-                  <input
-                    className={`m-2 w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700 cursor-pointer ${
-                      sending ? `cursor-loading` : ``
-                    }`}
-                    type="submit"
-                    value={sending ? `Sending...` : `Send`}
-                  />
-                </div>
                 <div className="w-full md:w-1/4 flex">
                   <input
-                    className="m-2 w-full shadow bg-gray-700 text-gray-400 focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700 cursor-pointer"
+                    className="m-2 w-full shadow bg-gray-700 text-gray-400 focus:outline-none font-bold py-2 px-4 md:ml-0 rounded text-primary border-gray-700 cursor-pointer"
                     type="button"
                     value="Reset"
                     onClick={() => reset()}
+                  />
+                </div>
+                <div className="w-full md:w-3/4 flex">
+                  <input
+                    className={`m-2 w-full shadow focus:outline-none font-bold py-2 px-4 md:mr-0 rounded border-gray-700 cursor-pointer ${
+                      sending
+                        ? `cursor-wait bg-gray-700 text-secondary`
+                        : `bg-quartary text-primary hover:bg-opacity-50`
+                    }`}
+                    type="submit"
+                    value={sending ? `Sending...` : `Send`}
                   />
                 </div>
               </div>
