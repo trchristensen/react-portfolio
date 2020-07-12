@@ -11,7 +11,7 @@ const Contact = () => {
   const setActiveSection = useSetRecoilState(activeSectionState);
   const [sending, setSending] = useState(false);
 
-  const { register, errors, handleSubmit, getValues } = useForm({
+  const { register, errors, handleSubmit, getValues, reset } = useForm({
     mode: "onChange",
     reValidateMode: "onChange",
   });
@@ -38,10 +38,12 @@ const Contact = () => {
         (result) => {
           toast.success('Your message has been set!');
           setSending(false);
+          reset();
         },
         (error) => {
-          toast.error('Error: technical speak: ' + error.text)
+          toast.error('ERROR (technical speak): ' + error.text)
           setSending(false);
+          reset();
         }
       );
   };
@@ -104,9 +106,8 @@ const Contact = () => {
               </div>
               <div className="flex flex-wrap mb-6">
                 <div className="relative w-full appearance-none label-floating">
-                  <input
+                  <textarea
                     className="bg-primary autoexpand tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-700 rounded focus:outline-none focus:border-gray-500"
-                    type="text"
                     name="message"
                     placeholder="Message..."
                     ref={register({ required: true })}
@@ -128,13 +129,27 @@ const Contact = () => {
                   data-sitekey="6LetJbAZAAAAAKhIDCmYzsQ5i2jTd4iRBKfKIjn_"
                 ></div>
               </div>
-              <input
-                className="w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700 pointer-cursor"
-                type="submit"
-                value={sending ? `Sending...` : `Send`}
-              />
+              <div className="row flex flex-row flex-wrap w-full">
+                <div className="w-full md:w-3/4 flex">
+                  <input
+                    className={`m-2 w-full shadow bg-quartary focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700 cursor-pointer ${
+                      sending ? `cursor-loading` : ``
+                    }`}
+                    type="submit"
+                    value={sending ? `Sending...` : `Send`}
+                  />
+                </div>
+                <div className="w-full md:w-1/4 flex">
+                  <input
+                    className="m-2 w-full shadow bg-gray-700 text-gray-400 focus:outline-none font-bold py-2 px-4 rounded text-primary border-gray-700 cursor-pointer"
+                    type="button"
+                    value="Reset"
+                    onClick={() => reset()}
+                  />
+                </div>
+              </div>
             </form>
-            <ToastContainer />
+            <ToastContainer draggable={false} position={"bottom-right"} />
           </div>
         </div>
       </section>

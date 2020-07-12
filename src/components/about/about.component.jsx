@@ -43,7 +43,7 @@ const About = () => {
               </p>
               <p className="text-secondary mb-4">
                 Experience with LAMP, MERN, and JAM stacks. Professional
-                experience at a Design Agency collaborating on a small team,
+                experience at a web design &amp; marketing agency collaborating on a small team,
                 taking on several responsibilities, including development,
                 social media marketing, and project manager for a brief period.
                 As a software engineer, I have experience with several

@@ -1,6 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap");
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 17px;
+}
+
+.theme-dark {
+  .Toastify__toast--success {
+    background-color: #e0f6ce;
+    color: #2F3337;
+    .Toastify__close-button {
+      color: #65bb5c;
+    }
+    .Toastify__progress-bar {
+      background-color: #65bb5c;
+    }
+  }
+  .Toastify__toast--error {
+    background-color: #ffdbdb;
+    color: #2F3337;
+    .Toastify__close-button {
+      color: #a1363b;
+    }
+    .Toastify__progress-bar {
+      background-color: #a1363b;
+    }
+  }
+}
+
+
+
+.theme-light {
+  .Toastify__toast--success {
+    background-color: #65bb5c;
+    color: #FAFAFB;
+    .Toastify__close-button {
+      color: #e0f6ce;
+    }
+    .Toastify__progress-bar {
+      background-color: #e0f6ce;
+    }
+  }
+  .Toastify__toast--error {
+    background-color: #a1363b;
+    color: #FAFAFB;
+    .Toastify__close-button {
+      color: #ffdbdb;
+    }
+    .Toastify__progress-bar {
+      background-color: #ffdbdb;
+    }
+  }
 }
