@@ -8,15 +8,18 @@ const Section = (props) => {
     const setActiveSection = useSetRecoilState(activeSectionState);
     
   return (
-    <section id={id} className={`flex flex-wrap flex-row ${className}`}>
-      {
-          waypoint !== false && id
-          ? <Waypoint onEnter={() => setActiveSection(id)} />
-          : null
-      }
-      
+    <section
+      id={id}
+      className={`flex flex-wrap flex-row items-center justify-center  ${className}`}
+    >
+      {waypoint !== false && id ? (
+        <Waypoint onEnter={() => setActiveSection(id)} />
+      ) : null}
+
       <div
-        className={`container flex flex-wrap flex-row py-20 mx-4 lg:mx-20 ${ border ? `border-b-2 border-gray-700` : `` }`}
+        className={`container flex flex-wrap flex-row py-20 mx-4 lg:mx-20 ${
+          border ? `border-b-2 border-gray-700` : ``
+        }`}
       >
         {props.title ? (
           <div className="row section__title flex flex-row w-full">
