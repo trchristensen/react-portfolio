@@ -10,7 +10,7 @@ const About = () => {
         <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-start content-start p-4">
           <img
             className="profile-pic"
-            src="https://avatars0.githubusercontent.com/u/6512813?s=460&amp;u=95c2a1f2bb132eeab6d7e4bb01871b61e4287ab6&amp;v=4"
+            src="/assets/temp-profile-pic-replace-asap.jpg"
             alt="Todd Christensen Profile Pic"
           />
         </div>

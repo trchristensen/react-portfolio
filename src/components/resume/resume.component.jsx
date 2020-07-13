@@ -28,7 +28,7 @@ const Resume = () => {
                       San Diego State University
                     </h3>
                     <p className="info primary-font mb-4 text-secondary">
-                      BA Public Administration <span>•</span>
+                      BA Public Administration <span>•</span>{" "}
                       <em className="date text-secondary">2007-2011</em>
                     </p>
                     <p className="text-secondary">
@@ -52,10 +52,9 @@ const Resume = () => {
                   ByToddChristensen
                 </h3>
                 <p className="info primary-font mb-4 text-secondary">
-                  Consultant/ Developer
-                  <span>•</span>
+                  Consultant/ Developer <span>•</span>{" "}
                   <em className="date">
-                    Remote <span>•</span>October 2018 - Present
+                    Remote <span>•</span> October 2018 - Present
                   </em>
                 </p>
                 <ul className="mb-2 text-secondary text-secondary list-disc pl-4">
@@ -83,15 +82,16 @@ const Resume = () => {
                   DesignStudio
                 </h3>
                 <p className="info primary-font mb-0 text-secondary">
-                  Developer <span>•</span> Full-Time<span>•</span>{" "}
+                  Developer <span>•</span> Full-Time <span>•</span>{" "}
                   <em className="date">
-                    San Diego, CA<span>•</span> April 2015 - October 2017
+                    {" "}
+                    San Diego, CA <span>•</span> April 2015 - October 2017
                   </em>
                 </p>
                 <p className="info primary-font mt-0 mb-0 text-secondary">
-                  Developer <span>•</span> Full-Time<span>•</span>{" "}
+                  Developer <span>•</span> Full-Time <span>•</span>{" "}
                   <em className="date">
-                    Remote<span>•</span>October 2017 - April 2018
+                    Remote <span>•</span> October 2017 - April 2018
                   </em>
                 </p>
 

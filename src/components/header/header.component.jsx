@@ -107,11 +107,11 @@ const Header = ({ data }) => {
               </button>
             </div>
 
-            <div className="handicap-toggle flex items-center justify-center w-6">
+            {/* <div className="handicap-toggle flex items-center justify-center w-6">
               <button className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10 text-lg px-2">
                 <FontAwesomeIcon icon={faWheelchair} />
               </button>
-            </div>
+            </div> */}
           </div>
 
           <div className="visible-links hidden lg:flex lg:items-center xl:flex">
