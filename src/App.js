@@ -88,7 +88,7 @@ const App = () => {
         <Section
           title="Contact"
           id="contact"
-          className="bg-primary text-secondary"
+          className="bg-primary text-secondary pb-20"
           border={false}
           waypoint={true}
         >
