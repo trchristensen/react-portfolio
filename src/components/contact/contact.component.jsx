@@ -13,25 +13,26 @@ const Contact = () => {
 
   const { register, errors, handleSubmit, getValues, reset } = useForm({
     mode: "onChange",
-    reValidateMode: "onChange",
+    reValidateMode: "onChange", 
   });
 
   let templateParams = {
-    from_name: getValues("email"),
+    from_name: getValues("name"),
     to_name: "user_csdQtDEEHHEjrSfmMfk8Rz",
-    name: getValues("name"),
-    message_html: getValues("message"),
+    email: getValues("email"),
+    message: getValues('message'),
   };
 
   const onSubmit = (data) => {
     setSending(true);
     console.log(data);
+    console.log(getValues('message'));
     console.log(templateParams);
     emailjs
       .send(
         "gmail",
         "template_7Y1aKv5g",
-        templateParams,
+        data,
         "user_csdQtDEEHHEjrSfmMfk8R"
       )
       .then(

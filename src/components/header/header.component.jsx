@@ -25,9 +25,9 @@ const Header = ({ data }) => {
       url: "about",
     },
     {
-      title: "Stack",
-      id: "stack",
-      url: "stack",
+      title: "Skills",
+      id: "skills",
+      url: "skills",
     },
     {
       title: "Resume",

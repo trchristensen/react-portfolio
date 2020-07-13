@@ -9,7 +9,7 @@ import useLocalStorage from "./hooks/useLocalStorage";
 import Header from "./components/header/header.component";
 import Hero from "./components/hero/hero.component";
 import About from "./components/about/about.component";
-import Stack from "./components/stack/stack.component";
+import Skills from "./components/skills/skills.component";
 import Resume from "./components/resume/resume.component";
 import Work from "./components/work/work.component";
 import Contact from "./components/contact/contact.component";
@@ -39,7 +39,7 @@ const App = () => {
       <div className="meat">
       <Hero />
       <About />
-      <Stack />
+      <Skills />
       <Resume />
       <Work />
       <Contact />
