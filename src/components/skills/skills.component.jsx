@@ -27,6 +27,11 @@ const stackList = [
     experience: 2014,
   },
   {
+    title: "Laravel",
+    description: "Full Stack PHP framework",
+    experience: '~1 year',
+  },
+  {
     title: "Firebase, AWS Amplify",
     description: "Backend-as-a-Service (BaaS)",
     experience: "~1 year",
