@@ -2,7 +2,7 @@ import React from "react";
 import { useSetRecoilState } from "recoil";
 import { Waypoint } from "react-waypoint";
 import { activeSectionState } from "../../atoms/activeSectionState";
-import Card from '../card/card.component';
+import Card from "../card/card.component";
 import {
   faInfoCircle,
   faExternalLinkAlt,
@@ -14,24 +14,11 @@ const Work = () => {
 
   return (
     <>
-      <section
-        id="work"
-        className="bg-primary flex items-center justify-center flex-wrap text-primary"
-      >
-        <Waypoint onEnter={() => setActiveSection("work")} />
-        <div className="container flex flex-col m-auto pt-20 pb-0 px-4 lg:px-20">
-          <h2 className="text-secondary mb-10 lg:mb-0 text-3xl ">
-            <span className="border-b-2 border-quartary">Work</span>
-          </h2>
-        </div>
-        <div className="container flex flex-col m-auto pt-20 pb-10 px-4 lg:px-20">
-          <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows gap-4">
-            {workData.map((item, index) => {
-              return <Card key={index} data={item} />;
-            })}
-          </div>
-        </div>
-      </section>
+      <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows gap-4">
+        {workData.map((item, index) => {
+          return <Card key={index} data={item} />;
+        })}
+      </div>
     </>
   );
 };

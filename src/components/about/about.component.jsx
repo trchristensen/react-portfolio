@@ -13,16 +13,7 @@ const About = () => {
 
   return (
     <>
-      <section
-        id="about"
-        className="bg-primary flex items-center justify-center
-          flex-wrap text-primary"
-      >
-        <div className="container flex flex-col m-auto py-20 mx-4 lg:mx-20 border-b-2 border-gray-700">
-          <h2 className="text-secondary mb-10 lg:mb-0 text-3xl">
-            <span className="border-b-2 border-quartary">About Me</span>
-          </h2>
-          <Waypoint onEnter={() => setActiveSection("about")} />
+
           <div className="row flex flex-row flex-wrap w-full mt-8">
             <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-start content-start p-4">
               <img
@@ -69,8 +60,6 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
     </>
   );
 };

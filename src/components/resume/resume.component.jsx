@@ -13,8 +13,8 @@ const Resume = () => {
         className="bg-primary flex items-center justify-center flex-wrap text-primary"
       >
         <Waypoint onEnter={() => setActiveSection("resume")} />
-        <div className="container flex flex-col m-auto pt-20 pb-20 mx-4 lg:mx-20 border-b-2 border-gray-700">
-          <div className="row education flex flex-wrap flex-row border-b-2 mb-4 pb-4 border-gray-700">
+        <div className="container flex flex-col m-auto">
+          <div className="row education flex flex-wrap flex-row mb-4 pb-4 ">
             <div className="w-full lg:w-1/4 columns header-col">
               <h1 className="text-secondary mb-10 lg:mb-0 text-3xl ">
                 <span className="border-b-2 border-quartary">Education</span>

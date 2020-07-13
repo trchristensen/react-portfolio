@@ -16,6 +16,8 @@ import Contact from "./components/contact/contact.component";
 import SocialBar from "./components/socialBar/socialBar.component";
 import Footer from "./components/footer/footer.component";
 
+import Section from "./components/section/section.component";
+
 import { themeState } from "./atoms/themeState";
 
 
@@ -37,13 +39,52 @@ const App = () => {
       <SocialBar />
       <Header />
       <div className="meat">
-      <Hero />
-      <About />
-      <Skills />
-      <Resume />
-      <Work />
-      <Contact />
-      <Footer />
+        <Hero />
+        <Section
+          title="About"
+          id="about"
+          className="bg-primary text-secondary"
+          border={true}
+          waypoint={true}
+        >
+          <About />
+        </Section>
+        <Section
+          title="Skills"
+          id="skills"
+          className="bg-primary text-secondary"
+          border={true}
+          waypoint={true}
+        >
+          <Skills />
+        </Section>
+        <Section
+          id="resume"
+          className="bg-primary text-secondary"
+          border={true}
+          waypoint={true}
+        >
+          <Resume />
+        </Section>
+        <Section
+          title="Work"
+          id="work"
+          className="bg-primary text-secondary"
+          border={true}
+          waypoint={true}
+        >
+          <Work />
+        </Section>
+        <Section
+          title="Contact"
+          id="contact"
+          className="bg-primary text-secondary"
+          border={false}
+          waypoint={true}
+        >
+          <Contact />
+        </Section>
+        <Footer />
       </div>
     </div>
   );

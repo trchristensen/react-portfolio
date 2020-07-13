@@ -63,19 +63,8 @@ const Skills = () => {
   const setActiveSection = useSetRecoilState(activeSectionState);
 
   return (
-    <>
-      <section
-        id="stack"
-        className="bg-primary flex items-center justify-center flex-wrap text-primary"
-      >
-        <Waypoint onEnter={() => setActiveSection("contact")} />
-        <div className="container flex flex-col m-auto pt-20 pb-0 px-4 lg:px-20">
-          <h2 className="text-secondary mb-10 lg:mb-0 text-3xl ">
-            <span className="border-b-2 border-quartary">Skills</span>
-          </h2>
-        </div>
-        <div className="container flex flex-row m-auto pt-20 pb-10 px-4 lg:px-20">
-          <div className="flex flex-row flex-wrap">
+    <div className="-mx-2 flex flex-row flex-wrap">
+
             {stackList.map((item) => {
               return (
                 <div className="stack__item text-secondary">
@@ -98,10 +87,8 @@ const Skills = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-    </>
+         
+    </div>
   );
 };
 
