@@ -28,14 +28,14 @@ const Contact = () => {
       .send("gmail", "template_7Y1aKv5g", data, "user_csdQtDEEHHEjrSfmMfk8R")
       .then(
         (result) => {
-          toast.success("Your message has been sent!");
+          toast.success("👍 Your message has been sent!");
           setSending(false);
           reset();
         },
         (error) => {
           error.text === "The g-recaptcha-response parameter not found"
-            ? toast.error("Please make sure you check the Captcha box.")
-            : toast.error("ERROR (technical speak): " + error.text);
+            ? toast.error("⚠️ Please make sure you check the Captcha box.")
+            : toast.error("⚠️ ERROR (technical speak): " + error.text);
 
           setSending(false);
           reset();

@@ -28,6 +28,7 @@ const workData = [
     image: {
       src: "/assets/300.png",
     },
+    status: "In Progress",
     tags: [
       "React",
       "Apollo",
@@ -62,6 +63,7 @@ const workData = [
     image: {
       src: "/assets/300.png",
     },
+    progress: "Completed",
     tags: ["VueJs", "Node.js", "Express", "Redis", "TailwindCSS"],
     links: [
       {
@@ -71,17 +73,17 @@ const workData = [
       },
       {
         text: "Visit Site",
-        url: "#",
+        url: "https://binance-taker-trades.herokuapp.com/",
         fa_icon: faExternalLinkAlt,
       },
       {
         text: "Server Code",
-        url: "#",
+        url: "https://github.com/trchristensen/binance-taker-trades-api",
         fa_icon: faGithub,
       },
       {
         text: "Client Code",
-        url: "#",
+        url: "https://github.com/trchristensen/binance-taker-trades-client",
         fa_icon: faGithub,
       },
     ],
@@ -93,6 +95,7 @@ const workData = [
     image: {
       src: "/assets/300.png",
     },
+    progress: "In Progress",
     tags: [
       "React",
       "Firebase",
@@ -109,12 +112,12 @@ const workData = [
       },
       {
         text: "Visit Site",
-        url: "#",
+        url: "/",
         fa_icon: faExternalLinkAlt,
       },
       {
         text: "View Code",
-        url: "#",
+        url: "https://github.com/trchristensen/react-portfolio",
         fa_icon: faGithub,
       },
     ],

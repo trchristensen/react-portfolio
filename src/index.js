@@ -7,13 +7,12 @@ import * as serviceWorker from './serviceWorker';
 import { RecoilRoot } from "recoil";
 
 
-ReactDOM.render(
+ReactDOM.unstable_createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RecoilRoot >
+    <RecoilRoot>
       <App />
     </RecoilRoot>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

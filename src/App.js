@@ -37,7 +37,9 @@ const App = () => {
 
   return (
     <div className={`theme-${theme} bg-primary`}>
-      <SocialBar />
+      <div className="sidebar__social items-start lg:flex lg:items-center ml-4 pt-4 lg:pt-0">
+        <SocialBar />
+      </div>
       <Header />
       <div className="meat">
         <Hero />

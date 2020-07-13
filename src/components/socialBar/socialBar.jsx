@@ -2,7 +2,7 @@ import React from 'react';
 import './socialBar.styles.scss';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faGoogle, faLinkedin, faInstagram, faGithub, faSkype } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 const SocialBar = () => {
@@ -14,33 +14,23 @@ const SocialBar = () => {
     },
     {
       name: "twitter",
-      url: "http://twitter.com/shillainmanila",
+      url: "https://twitter.com/shillainmanila",
       icon: faTwitter,
     },
     {
-      name: "google-plus",
-      url: "http://googleplus.com/trchristensen",
-      icon: faGoogle,
-    },
-    {
       name: "linkedin",
-      url: "#",
-      icon: faLinkedin
+      url: "https://www.linkedin.com/in/todd-christensen-3651b841/",
+      icon: faLinkedin,
     },
     {
       name: "instagram",
-      url: "#",
-      icon: faInstagram
+      url: "https://instagram.com/tchristensen_",
+      icon: faInstagram,
     },
     {
       name: "github",
       url: "http://github.com/trchristensen",
-      icon: faGithub
-    },
-    {
-      name: "skype",
-      url: "#",
-      icon: faSkype
+      icon: faGithub,
     },
   ];
 
@@ -48,9 +38,8 @@ const SocialBar = () => {
 
   return (
     <>
-      <div className="sidebar__social items-start hidden lg:flex lg:items-center ml-4 pt-4 lg:pt-0">
-        <div className="social">
-          <ul className="social__menu">
+        <div className="social w-full flex flex-wrap flex-row">
+          <ul className="social__menu flex flex-wrap flex-row w-full">
             {social.map((network) => (
               <li key={network.name}>
                 <a href={network.url} className="lg:p-2 text-lg">
@@ -60,7 +49,6 @@ const SocialBar = () => {
             ))}
           </ul>
         </div>
-      </div>
     </>
   );
   

@@ -5,6 +5,7 @@ import { primaryNavState } from "../../atoms/primaryNavState";
 import { useSetRecoilState, useRecoilValue } from "recoil";
 import { Link } from "react-scroll";
 import "./header.styles.scss";
+import SocialBar from "../socialBar/socialBar";
 import { ReactComponent as SunIcon } from "../../assets/icons/SunIcon.svg";
 import { ReactComponent as MoonIcon } from "../../assets/icons/MoonIcon.svg";
 import { ReactComponent as HamburgerOpen } from "../../assets/icons/HamburgerOpen.svg";
@@ -189,6 +190,9 @@ const Header = ({ data }) => {
             >
               Link 3
             </button>
+          </div>
+          <div className="nav__socialBar flex flex-wrap flex-row justify-between items-center p-4 text-quartary text-lg">
+            <SocialBar />
           </div>
         </div>
       </div>
