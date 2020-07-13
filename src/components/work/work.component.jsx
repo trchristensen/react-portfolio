@@ -1,7 +1,4 @@
 import React from "react";
-import { useSetRecoilState } from "recoil";
-import { Waypoint } from "react-waypoint";
-import { activeSectionState } from "../../atoms/activeSectionState";
 import Card from "../card/card.component";
 import {
   faInfoCircle,
@@ -10,8 +7,6 @@ import {
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Work = () => {
-  const setActiveSection = useSetRecoilState(activeSectionState);
-
   return (
     <>
       <div className="w-full grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows gap-4">

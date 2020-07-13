@@ -10,6 +10,7 @@ import Header from "./components/header/header.component";
 import Hero from "./components/hero/hero.component";
 import About from "./components/about/about.component";
 import Skills from "./components/skills/skills.component";
+import MyStack from "./components/myStack/myStack.component";
 import Resume from "./components/resume/resume.component";
 import Work from "./components/work/work.component";
 import Contact from "./components/contact/contact.component";
@@ -53,10 +54,19 @@ const App = () => {
           title="Skills"
           id="skills"
           className="bg-primary text-secondary"
-          border={true}
+          border={false}
           waypoint={true}
         >
           <Skills />
+        </Section>
+        <Section
+          title="Stack"
+          id="stack"
+          className="bg-primary text-secondary"
+          border={true}
+          waypoint={true}
+        >
+          <MyStack />
         </Section>
         <Section
           id="resume"

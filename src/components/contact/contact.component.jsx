@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import "./contact.styles.scss";
-import { useSetRecoilState } from "recoil";
-import { Waypoint } from "react-waypoint";
-import { activeSectionState } from "../../atoms/activeSectionState";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
-  const setActiveSection = useSetRecoilState(activeSectionState);
   const [sending, setSending] = useState(false);
 
   const { register, errors, handleSubmit, getValues, reset } = useForm({

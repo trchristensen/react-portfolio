@@ -30,6 +30,11 @@ const Header = ({ data }) => {
       url: "skills",
     },
     {
+      title: "Stack",
+      id: "stack",
+      url: "stack",
+    },
+    {
       title: "Resume",
       id: "resume",
       url: "resume",
