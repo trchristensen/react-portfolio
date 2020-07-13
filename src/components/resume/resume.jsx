@@ -57,7 +57,7 @@ const Resume = () => {
                     Remote <span>•</span> October 2018 - Present
                   </em>
                 </p>
-                <ul className="mb-2 text-secondary text-secondary list-disc pl-4">
+                <ul className="mb-2 text-secondary list-disc pl-4">
                   <li>
                     Contracted developer work for DesignStudio.com, while
                     traveling the world.
@@ -71,14 +71,14 @@ const Resume = () => {
                     marketing campaigns for Facebook ads and Twitter.
                   </li>
                 </ul>
-                <p className="mb-2 text-secondary text-secondary">
+                <p className="mb-2 text-secondary">
                   During this time, I have attained a deep knowledge of
                   javascript ES6, React and related libraries, GraphQL with
                   Apollo-- working on several <a href="#work">side projects</a>.
                 </p>
               </div>
               <div className="row flex flex-wrap flex-col w-full mt-6">
-                <h3 className="text-secondary text-2xl font-bold text-secondary">
+                <h3 className="text-secondary text-2xl font-bold">
                   DesignStudio
                 </h3>
                 <p className="info primary-font mb-0 text-secondary">

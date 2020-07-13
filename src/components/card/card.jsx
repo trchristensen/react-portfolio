@@ -1,11 +1,7 @@
 import React from "react";
-// import { useRecoilValue } from 'recoil';
-// import { themeState } from '../../atoms/themeState';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 const Card = (props) => {
-  // const theme = useRecoilValue(themeState);
 
   return (
     <div className="card shadow max-w-full rounded-lg overflow-hidden my-4 border border-gray-700">

@@ -9,8 +9,8 @@ import { ReactComponent as SunIcon } from "../../assets/icons/SunIcon.svg";
 import { ReactComponent as MoonIcon } from "../../assets/icons/MoonIcon.svg";
 import { ReactComponent as HamburgerOpen } from "../../assets/icons/HamburgerOpen.svg";
 import { ReactComponent as HamburgerClosed } from "../../assets/icons/HamburgerClosed.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWheelchair } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faWheelchair } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ data }) => {
   //   const { name } = data.main;
@@ -95,7 +95,7 @@ const Header = ({ data }) => {
     <>
       <nav className="nav__primary flex items-center justify-end flex-wrap fixed w-full bg-primary bottom-0 lg:bottom-auto">
         <div
-          className={`navbar order-2 flex w-full justify-between px-6 py-1 pb-2 lg:py-2 flex justify-between w-full flex-row`}
+          className={`navbar order-2 flex w-full justify-between px-6 py-1 pb-2 lg:py-2 flex-row`}
         >
           <div className="navbar__icons flex justify-center items-center">
             <div className="theme-toggle flex items-center justify-center w-6">
@@ -108,7 +108,7 @@ const Header = ({ data }) => {
             </div>
 
             {/* <div className="handicap-toggle flex items-center justify-center w-6">
-              <button className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10 text-lg px-2">
+              <button className="inline-blockleading-none text-secondary cursor-pointer w-10 h-10 text-lg px-2">
                 <FontAwesomeIcon icon={faWheelchair} />
               </button>
             </div> */}
@@ -147,7 +147,7 @@ const Header = ({ data }) => {
       <div
         id="menu-dropdown"
         ref={node}
-        className={`menu-dropdown order-1 w-full block flex-grow flex-col flex w-auto h-screen`}
+        className={`menu-dropdown order-1 flex-grow flex-col flex w-auto h-screen`}
       >
         <div className="menu-dropdown-container bg-dark h-screen pt-8 shadow">
           <div className="lg:flex-grow mx-4">

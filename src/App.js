@@ -6,18 +6,18 @@ import { useRecoilValue } from "recoil";
 import useLocalStorage from "./hooks/useLocalStorage";
 // import ReactGA from "react-ga";
 
-import Header from "./components/header/header.component";
-import Hero from "./components/hero/hero.component";
-import About from "./components/about/about.component";
-import Skills from "./components/skills/skills.component";
-import MyStack from "./components/myStack/myStack.component";
-import Resume from "./components/resume/resume.component";
-import Work from "./components/work/work.component";
-import Contact from "./components/contact/contact.component";
-import SocialBar from "./components/socialBar/socialBar.component";
-import Footer from "./components/footer/footer.component";
+import Header from "./components/header/header";
+import Hero from "./components/hero/hero";
+import About from "./components/about/about";
+import Skills from "./components/skills/skills";
+import MyStack from "./components/myStack/myStack";
+import Resume from "./components/resume/resume";
+import Work from "./components/work/work";
+import Contact from "./components/contact/contact";
+import SocialBar from "./components/socialBar/socialBar";
+import Footer from "./components/footer/footer";
 
-import Section from "./components/section/section.component";
+import Section from "./components/section/section";
 
 import { themeState } from "./atoms/themeState";
 

@@ -90,7 +90,7 @@ const Skills = () => {
             {stackList.map((item) => {
               return (
                 <div className="stack__item text-secondary w-full md:w-auto">
-                  <div className="stack__item-content flex flex-row justify-center items-center border border-gray-700 rounded-lg m-2 py-2 px-4">
+                  <div className="stack__item-content flex flex-row justify-start items-center border border-gray-700 rounded-lg m-2 py-2 px-4">
                     <div className="stack__item-icon pr-4">
                       <img
                         width="40"

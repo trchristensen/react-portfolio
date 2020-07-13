@@ -23,7 +23,8 @@
     "react-toastify": "^6.0.8",
     "react-waypoint": "^9.0.3",
     "recoil": "^0.0.10",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "unused-webpack-plugin": "^2.4.0"
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start",
