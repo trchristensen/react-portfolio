@@ -9,6 +9,8 @@ import { ReactComponent as SunIcon } from "../../assets/icons/SunIcon.svg";
 import { ReactComponent as MoonIcon } from "../../assets/icons/MoonIcon.svg";
 import { ReactComponent as HamburgerOpen } from "../../assets/icons/HamburgerOpen.svg";
 import { ReactComponent as HamburgerClosed } from "../../assets/icons/HamburgerClosed.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWheelchair } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ data }) => {
   //   const { name } = data.main;
@@ -95,13 +97,21 @@ const Header = ({ data }) => {
         <div
           className={`navbar order-2 flex w-full justify-between px-6 py-1 pb-2 lg:py-2 flex justify-between w-full flex-row`}
         >
-          <div className="theme-toggle flex items-center justify-center w-6">
-            <button
-              onClick={() => toggleTheme()}
-              className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10"
-            >
-              {theme === "light" ? <MoonIcon /> : <SunIcon />}
-            </button>
+          <div className="navbar__icons flex justify-center items-center">
+            <div className="theme-toggle flex items-center justify-center w-6">
+              <button
+                onClick={() => toggleTheme()}
+                className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10"
+              >
+                {theme === "light" ? <MoonIcon /> : <SunIcon />}
+              </button>
+            </div>
+
+            <div className="handicap-toggle flex items-center justify-center w-6">
+              <button className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10 text-lg px-2">
+                <FontAwesomeIcon icon={faWheelchair} />
+              </button>
+            </div>
           </div>
 
           <div className="visible-links hidden lg:flex lg:items-center xl:flex">

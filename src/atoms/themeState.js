@@ -2,7 +2,16 @@ import { atom } from "recoil";
 
 export const checkPersistedThemeState = () => {
   let item = window.localStorage.getItem("themeState");
-  return item ? JSON.parse(item) : "light";
+
+  const checkUserPref = () => {
+    const userPrefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+      console.log(userPrefersDark ? `dark` : `light`);
+    return userPrefersDark ? `dark` : `light`;
+  };
+
+  return item ? JSON.parse(item) : checkUserPref();
 };
 
 export const themeState = atom({
