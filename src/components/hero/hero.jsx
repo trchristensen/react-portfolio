@@ -23,7 +23,7 @@ const Hero = (props) => {
             Todd Christensen
           </h2>
           <h3 className="text-quartary text-lg lg:text-3xl">
-            Software Engineer
+            React Developer
           </h3>
           <span
             className={`primary-font mt-3 inline-block description ${
