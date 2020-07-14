@@ -42,7 +42,7 @@ const SocialBar = () => {
           <ul className="social__menu flex flex-wrap flex-row w-full">
             {social.map((network) => (
               <li key={network.name}>
-                <a href={network.url} className="lg:p-2 text-lg">
+                <a href={network.url} className="p-2 text-lg">
                   <FontAwesomeIcon icon={network.icon} />
                 </a>
               </li>
