@@ -19,7 +19,7 @@ const Section = (props) => {
       <div
         className={`container flex flex-wrap flex-row mx-5 md:mx-10 lg:mx-20 ${
           border ? `py-20` : `pt-20`
-        } ${border ? `border-b-2 border-gray-700lg:mx-20` : ``}`}
+        } ${border ? `border-b-2 border-gray-700 lg:mx-20` : ``}`}
       >
         {props.title ? (
           <div className="row section__title flex flex-row w-full">
