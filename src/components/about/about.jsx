@@ -9,7 +9,7 @@ const About = () => {
       <div className="row flex flex-row flex-wrap w-full mt-8">
         <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-start content-start p-4">
           <img
-            className="profile-pic rounded-full"
+            className="profile-pic rounded-full w-56 h-auto"
             src="/assets/temp-profile-pic-replace-asap.jpg"
             alt="Todd Christensen Profile Pic"
           />

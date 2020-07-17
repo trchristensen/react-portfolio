@@ -30,7 +30,7 @@ const Hero = (props) => {
               theme === "dark" ? `text-gray-400` : `text-gray-700`
             }`}
           >
-            I'm a remote based software engineer from California, currently
+            I'm a software engineer from California, currently
             residing in the Philippines{" "}
             <span role="img" aria-label="Philippines Flag">
               🇵🇭
