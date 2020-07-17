@@ -7,12 +7,19 @@ const About = () => {
   return (
     <>
       <div className="row flex flex-row flex-wrap w-full mt-8">
-        <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-start content-start p-4">
-          <img
-            className="profile-pic rounded-full w-56 h-auto"
-            src="/assets/temp-profile-pic-replace-asap.jpg"
-            alt="Todd Christensen Profile Pic"
-          />
+        <div className="w-full md:w-1/2 lg:w-1/3 text-secondary about-left flex flex-wrap justify-center content-center p-4">
+          <div class="w-64 h-64 relative mb-4">
+            <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-purple table cursor-pointer">
+              <span class="hidden group-hover:table-cell text-white font-bold align-middle">
+                KR
+              </span>
+              <img
+                src="/assets/temp-profile-pic-replace-asap.jpg"
+                alt="lovely avatar"
+                class="object-cover object-center w-full h-full visible group-hover:hidden"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="w-full lg:w-2/3 about-right flex flex-wrap content-center">
@@ -34,9 +41,9 @@ const About = () => {
           </p>
           <p className="text-secondary mb-4">
             During the last several years I have traveled much of South East
-            Asia, Hong Kong, and Japan while running a consulting business and
-            working on my own personal projects. I am currently residing in the
-            Philippines.
+            Asia, Hong Kong, and Japan while running a freelance/ consulting
+            business and working on my own personal projects. I am currently
+            residing in the Philippines.
           </p>
           <div className="row flex flex-row flex-wrap w-full mt-12">
             <div className="w-full">

@@ -3,9 +3,12 @@ import "./contact.styles.scss";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
+import { themeState } from '../../atoms/themeState';
+import { useRecoilValue } from 'recoil';
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
+  const theme = useRecoilValue(themeState);
 
   const { register, errors, handleSubmit, getValues, reset } = useForm({
     mode: "onChange",
@@ -64,7 +67,7 @@ const Contact = () => {
               >
                 Your name
               </label>
-              {errors.email && "Email is required"}
+              <span className="error__message text-red-500">{errors.email && "Email is required"}</span>
             </div>
           </div>
           <div className="flex flex-wrap mb-6">
@@ -84,7 +87,7 @@ const Contact = () => {
               >
                 Your name
               </label>
-              {errors.name && "Name is required"}
+              <span className="error__message text-red-500">{errors.name && "Name is required"}</span>
             </div>
           </div>
           <div className="flex flex-wrap mb-6">
@@ -99,7 +102,7 @@ const Contact = () => {
                 htmlFor="message"
                 className="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text"
               ></label>
-              {errors.message && "message is required"}
+              <span className="error__message text-red-500">{errors.message && "Message is required"}</span>
             </div>
           </div>
           <div
@@ -107,6 +110,7 @@ const Contact = () => {
           >
             <div
               className="g-recaptcha"
+              data-theme={theme}
               data-sitekey="6LetJbAZAAAAAKhIDCmYzsQ5i2jTd4iRBKfKIjn_"
             ></div>
           </div>
