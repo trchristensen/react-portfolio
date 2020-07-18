@@ -171,7 +171,7 @@ const Header = ({ data }) => {
               ) : null
             )}
           </div>
-          <div className="lg:flex-grow border-top mx-4 mt-2 pt-4 border-t border-gray-700">
+          {/* <div className="lg:flex-grow border-top mx-4 mt-2 pt-4 border-t border-gray-700">
             <button
               onClick={() => setNavOpen(false)}
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-500 mr-2 ml-2 mb-2 cursor-pointer text-2xl text-white"
@@ -190,7 +190,7 @@ const Header = ({ data }) => {
             >
               Link 3
             </button>
-          </div>
+          </div> */}
           <div className="nav__socialBar flex flex-wrap flex-row justify-between items-center p-4 text-quartary text-lg">
             <SocialBar />
           </div>

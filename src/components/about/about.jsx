@@ -47,13 +47,14 @@ const About = () => {
           </p>
           <div className="row flex flex-row flex-wrap w-full mt-12">
             <div className="w-full">
-              <button
-                href="#"
+              <a
+                target="_blank"
+                href="https://docs.google.com/document/d/1AVXTyyuJYV1dfKAlz2BPQqpF041rQx1kz1Ug9BHOmbU/edit?usp=sharing"
                 className="button btn text-secondary border-gray-700 border rounded-lg px-4 py-2 bg-primary hover:bg-quartary hover:text-primary"
               >
                 <FontAwesomeIcon icon={faDownload} />
                 <span className="pl-2">Download Resume</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
