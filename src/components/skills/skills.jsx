@@ -1,4 +1,6 @@
 import React from "react";
+import { useRecoilValue } from 'recoil';
+import { themeState } from '../../atoms/themeState';
 
 const currentYear = new Date().getFullYear();
 const stackList = [
@@ -84,13 +86,15 @@ const stackList = [
 
 const Skills = () => {
 
+  const theme = useRecoilValue(themeState);
+
   return (
     <div className="-mx-2 flex flex-row flex-wrap">
 
             {stackList.map((item, i) => {
               return (
                 <div key={`${i}`} id={`stack__item-${i}`} className="stack__item text-secondary w-full md:w-auto">
-                  <div className="stack__item-content flex flex-row justify-start items-center border border-gray-700 rounded-lg m-2 py-2 px-4">
+                  <div className={`stack__item-content flex flex-row justify-start items-center border shadow-md rounded-lg m-2 py-2 px-4 ${ theme === 'dark' ? `border-gray-700` : `` }`}>
                     <div className="stack__item-icon pr-4">
                       <img
                         width="40"

@@ -102,7 +102,7 @@ const Header = ({ data }) => {
             <div className="theme-toggle flex items-center justify-center w-6">
               <button
                 onClick={() => toggleTheme()}
-                className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10"
+                className="inline-block text-sm leading-none text-secondary cursor-pointer w-10 h-10 focus:outline-none"
               >
                 {theme === "light" ? <MoonIcon /> : <SunIcon />}
               </button>
@@ -139,7 +139,7 @@ const Header = ({ data }) => {
 
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="flex items-center pt-1 pb-2 py-2 text-quartary"
+            className="flex items-center pt-1 pb-2 py-2 text-quartary focus:outline-none"
           >
             {navOpen ? <HamburgerOpen /> : <HamburgerClosed />}
           </button>

@@ -1,10 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { themeState } from '../../atoms/themeState';
+import { useRecoilValue } from 'recoil';
+
 const Card = (props) => {
 
+  const theme = useRecoilValue(themeState);
+
   return (
-    <div className="card shadow max-w-full rounded-lg overflow-hidden my-4 border border-gray-700">
+    <div className={`card shadow max-w-full rounded-lg overflow-hidden my-4 border ${ theme === 'dark' ? `border-gray-700` : `` }`}>
       <img
         className="w-full h-56 object-cover object-center"
         src={props.data.image.src}
@@ -12,7 +17,9 @@ const Card = (props) => {
       />
       <div className="flex flex-wrap items-center px-6 py-1">
         {props.data.tags.map((tag) => (
-          <span className="py-1 px-2 mr-2 my-1 no-underline bg-primary btn-shadow text-secondary border rounded-md border-gray-700 border-opacity-75 font-primary text-xs">
+          <span className={
+            `py-1 px-2 mr-2 my-1 no-underline bg-primary btn-shadow shadow text-secondary rounded-md border-gray-700 border-opacity-75 font-primary text-xs`
+            }>
             {tag}
           </span>
         ))}

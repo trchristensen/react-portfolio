@@ -7,7 +7,7 @@ const myStack = () => {
           These are my preferred libraries &amp; technologies that I use in my
           projects.
         </p>
-        <pre className="whitespace-normal bg-dark text-gray-600 p-8 rounded-lg overflow-x-scroll">
+        <pre className="whitespace-normal bg-dark text-gray-600 shadow-xl p-8 rounded-lg overflow-x-scroll">
           <code>
             <span className="text-quartary">"react"</span>: "My favorite
             javascript library",

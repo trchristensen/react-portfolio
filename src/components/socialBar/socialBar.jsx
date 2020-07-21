@@ -3,10 +3,16 @@ import './socialBar.styles.scss';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 
 const SocialBar = () => {
   const social = [
+    {
+      name: "nomadlist",
+      url: "https://nomadlist.com/@christensentr",
+      icon: faGlobe,
+    },
     {
       name: "facebook",
       url: "https://facebook.com/trchristensen",
