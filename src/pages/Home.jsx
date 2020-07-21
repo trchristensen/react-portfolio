@@ -12,7 +12,6 @@ import SocialBar from "../components/socialBar/socialBar";
 import Footer from "../components/footer/footer";
 import Section from "../components/section/section";
 
-
 const Home = () => {
   return (
     <>
@@ -79,6 +78,6 @@ const Home = () => {
       </div>
     </>
   );
-}
+};
 
 export default Home;
