@@ -32,10 +32,9 @@ const workData = [
     tags: [
       "React",
       "Apollo",
-      "AWS Amplify",
-      "React Router",
-      "Recoil",
-      "React Hook Form",
+      "Strapi",
+      "Express",
+      "Next",
       "TailwindCSS",
     ],
     links: [
