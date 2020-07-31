@@ -113,7 +113,7 @@ const Contact = () => {
               </div>
             </div>
             <div
-              className={`mb-6 gcaptcha ${getValues("email") ? `` : `hidden`}`}
+              className={`mb-6 gcaptcha `}
             >
               <div
                 className="g-recaptcha"
