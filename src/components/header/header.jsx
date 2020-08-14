@@ -23,6 +23,11 @@ const Header = ({ data }) => {
       url: "top",
     },
     {
+      title: "Work",
+      id: "work",
+      url: "work",
+    },
+    {
       title: "About",
       id: "about",
       url: "about",
@@ -41,11 +46,6 @@ const Header = ({ data }) => {
       title: "Resume",
       id: "resume",
       url: "resume",
-    },
-    {
-      title: "Work",
-      id: "work",
-      url: "work",
     },
     {
       title: "Contact",

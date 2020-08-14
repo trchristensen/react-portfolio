@@ -22,6 +22,15 @@ const Home = () => {
       <div className="meat">
         <Hero />
         <Section
+          title="Work"
+          id="work"
+          className="bg-primary text-secondary"
+          border={true}
+          waypoint={true}
+        >
+          <Work />
+        </Section>
+        <Section
           title="About"
           id="about"
           className="bg-primary text-secondary"
@@ -56,15 +65,7 @@ const Home = () => {
         >
           <Resume />
         </Section>
-        <Section
-          title="Work"
-          id="work"
-          className="bg-primary text-secondary"
-          border={true}
-          waypoint={true}
-        >
-          <Work />
-        </Section>
+
         <Section
           title="Contact"
           id="contact"
