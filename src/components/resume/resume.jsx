@@ -52,7 +52,7 @@ const Resume = () => {
                   ByToddChristensen
                 </h3>
                 <p className="info primary-font mb-4 text-secondary">
-                  Consultant/ Developer <span>•</span>{" "}
+                  Web Developer <span>•</span>{" "}
                   <em className="date">
                     Remote <span>•</span> October 2018 - Present
                   </em>
@@ -73,7 +73,7 @@ const Resume = () => {
                 </ul>
                 <p className="mb-2 text-secondary">
                   During this time, I have attained a deep knowledge of
-                  javascript ES6, React and related libraries, GraphQL with
+                  javascript ES6, TypeSCript, React and related libraries, GraphQL with
                   Apollo-- working on several <a href="#work">side projects</a>.
                 </p>
               </div>
@@ -82,16 +82,10 @@ const Resume = () => {
                   DesignStudio
                 </h3>
                 <p className="info primary-font mb-0 text-secondary">
-                  Developer <span>•</span> Full-Time <span>•</span>{" "}
+                  Web Developer <span>•</span> Full-Time <span>•</span>{" "}
                   <em className="date">
                     {" "}
-                    San Diego, CA <span>•</span> April 2015 - October 2017
-                  </em>
-                </p>
-                <p className="info primary-font mt-0 mb-0 text-secondary">
-                  Developer <span>•</span> Full-Time <span>•</span>{" "}
-                  <em className="date">
-                    Remote <span>•</span> October 2017 - April 2018
+                    San Diego, CA <span>•</span> April 2015 - April 2018
                   </em>
                 </p>
 

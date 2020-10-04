@@ -10,8 +10,9 @@ import { ReactComponent as SunIcon } from "../../assets/icons/SunIcon.svg";
 import { ReactComponent as MoonIcon } from "../../assets/icons/MoonIcon.svg";
 import { ReactComponent as HamburgerOpen } from "../../assets/icons/HamburgerOpen.svg";
 import { ReactComponent as HamburgerClosed } from "../../assets/icons/HamburgerClosed.svg";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faWheelchair } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ data }) => {
   //   const { name } = data.main;
@@ -136,13 +137,23 @@ const Header = ({ data }) => {
               )}
             </div>
           </div>
-
-          <button
-            onClick={() => setNavOpen(!navOpen)}
-            className="flex items-center pt-1 pb-2 py-2 text-quartary focus:outline-none"
-          >
-            {navOpen ? <HamburgerOpen /> : <HamburgerClosed />}
-          </button>
+          <div className="flex w-auto items-center justify-center">
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://drive.google.com/file/d/1O9dOB56jeDlxIn7lXGC0SIW36Zu8q0B0/view?usp=sharing"
+              className="mt-1 mr-4 button btn text-secondary border-gray-700 border rounded-lg px-4 py-2 bg-primary hover:bg-quartary hover:text-primary"
+            >
+              <FontAwesomeIcon icon={faDownload} />
+              <span className="pl-2">Resume</span>
+            </a>
+            <button
+              onClick={() => setNavOpen(!navOpen)}
+              className="flex items-center pt-1 pb-2 py-2 text-quartary focus:outline-none"
+            >
+              {navOpen ? <HamburgerOpen /> : <HamburgerClosed />}
+            </button>
+          </div>
         </div>
       </nav>
       <div
