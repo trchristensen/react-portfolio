@@ -14,8 +14,8 @@ const About = () => {
                 KR
               </span>
               <img
-                src="/assets/temp-profile-pic-replace-asap.jpg"
-                alt="lovely avatar"
+                src="/assets/me-and-fam.jpg"
+                alt="im the dad on the right"
                 class="object-cover object-center w-full h-full visible group-hover:hidden"
               />
             </div>
@@ -36,13 +36,12 @@ const About = () => {
             team, taking on several responsibilities, including development,
             social media marketing, and project manager for a brief period. As a
             software engineer, I have experience with several programming
-            languages and frameworks including Ruby Rails, Wordpress and Laravel
-            with PHP, Python, and Javascript ES6 / TypeScript with Node, Vue,
-            and React.
+            languages and frameworks including Javascript ES6 / TypeScript with Node, Vue,
+            and React / Next.js, Wordpress and Laravel
+            with PHP, and Python.
           </p>
           <p className="text-secondary mb-4">
-            During the last several years I have traveled South East Asia, Hong
-            Kong, and Japan while running a freelance/ consulting business and
+            During the last several years I have traveled South East Asia while running a freelance/ consulting business and
             working on my own personal projects. I am currently residing in the
             Philippines.
           </p>

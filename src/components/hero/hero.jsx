@@ -23,14 +23,14 @@ const Hero = (props) => {
             Todd Christensen
           </h2>
           <h3 className="text-quartary text-lg lg:text-3xl">
-            React JS Engineer
+            Developer
           </h3>
           <span
             className={`primary-font mt-3 inline-block description ${
               theme === "dark" ? `text-gray-400` : `text-gray-700`
             }`}
           >
-            I'm a software engineer from California, currently
+            I'm a web developer from California, temporarily
             residing in the Philippines{" "}
             <span role="img" aria-label="Philippines Flag">
               🇵🇭

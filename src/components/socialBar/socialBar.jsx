@@ -19,11 +19,6 @@ const SocialBar = () => {
       icon: faFacebook,
     },
     {
-      name: "twitter",
-      url: "https://twitter.com/shillainmanila",
-      icon: faTwitter,
-    },
-    {
       name: "linkedin",
       url: "https://www.linkedin.com/in/todd-christensen-3651b841/",
       icon: faLinkedin,
