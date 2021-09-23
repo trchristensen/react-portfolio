@@ -11,7 +11,7 @@ const Card = (props) => {
   return (
     <div className={`card shadow max-w-full rounded-lg overflow-hidden my-4 border ${ theme === 'dark' ? `border-gray-700` : `` }`}>
       <img
-        className="w-full h-56 object-cover object-center"
+        className="w-full h-72 object-cover object-top"
         src={props.data.image.src}
         alt="avatar"
       />
@@ -40,7 +40,9 @@ const Card = (props) => {
               >
                 <FontAwesomeIcon icon={link.fa_icon} />
                 <span className="px-2 text-sm">
-                  <button href={link.url}>{link.text}</button>
+                  <a rel="noopener noreferrer" target="_blank" href={link.url}>
+                    {link.text}
+                  </a>
                 </span>
               </div>
             );
