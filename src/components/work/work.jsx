@@ -68,12 +68,12 @@ const workData = [
   {
     title: "Barangay",
     description:
-      "A neighbor social media platform for the Philippines. Connects neighbors and local sari-sari stores.",
+      "A neighbor social media platform for the Philippines. Will connect neighbors and local sari-sari stores. The API will be built with NextJS and the mobile apps will be built with React Native. Neo4j graph database will be used along with Supabase (postgres) for authentication and realtime chat.",
     image: {
       src: "/assets/under-construction-c.jpeg",
     },
     status: "In Progress",
-    tags: ["React", "Apollo", "Strapi", "Express", "Next", "TailwindCSS"],
+    tags: ["React", "React Native", "Next", "Apollo", "graphql", "TailwindCSS", "neo4j"],
     links: [
       {
         text: "Get More Info",
