@@ -3,7 +3,6 @@ import "./App.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { useRecoilValue } from "recoil";
 import useLocalStorage from "./hooks/useLocalStorage";
-import { withRouter } from "react-router";
 // import ReactGA from "react-ga";
 
 import Home from './pages/Home';
