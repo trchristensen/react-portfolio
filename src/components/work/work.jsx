@@ -44,7 +44,7 @@ const workData = [
     ],
   },
   {
-    title: "dstack",
+    title: "stackd",
     description:
       "A question/answer platform (quora, stackexchange) built on the Hive social media blockchain. All content is immutable and authentication and data storage is on the Hive network.",
     image: {
