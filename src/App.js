@@ -13,12 +13,9 @@ import {
   Route
 } from "react-router-dom";
 
-
 import { themeState } from "./atoms/themeState";
 
 const App = () => {
-  // ReactGA.initialize("UA-225799922");
-  // ReactGA.pageview(window.location.pathname);
 
   const [, setPersistedTheme] = useLocalStorage("themeState", "light");
   const theme = useRecoilValue(themeState);
